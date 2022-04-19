@@ -36,7 +36,7 @@ const init = () => {
         submitButton.addEventListener('click', (evento) => {
            evento.preventDefault();
                    
-           window.location.href = 'importar.php'   /*além de encaminhar pra esta página colocar na opção de importação a verificação se ta logado */
+           window.location.href = 'importacoes.php'   /*além de encaminhar pra esta página colocar na opção de importação a verificação se ta logado */
    
         })
 

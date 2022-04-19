@@ -1,0 +1,43 @@
+body {
+    background-color: rgba(137, 148, 148, 0.103);
+}
+
+
+.formadicionar {
+    display: block;
+    padding: 2px;
+    margin-left: 20vw;
+
+}
+
+.nomepreco {
+    display: block;
+    margin-bottom: 1vh;
+    width: 46vw;
+}
+
+#produtotexto {
+    width: 46vw;
+    padding-bottom: 4vw;
+    margin-bottom: 1vh;
+}
+
+.botaoadiciona {
+    display: block;
+    width: 46vw;
+    color: #ffffff;
+    background-color: blue;
+    border: none;
+    padding: 0.5vw;
+    margin-bottom: 3vh;
+}
+
+.botaoadicionaimagem {
+    display: block;
+    width: 30vw;
+    color: #ffffff;
+    background-color: blue;
+    border: none;
+    padding: 0.5vw;
+    margin-left: 20vw ;
+}    
