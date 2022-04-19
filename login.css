@@ -1,0 +1,40 @@
+#iniciosessao {
+	width: 40%;
+	background-color: rgba(82, 205, 164, 0.682);
+	padding-left: 10vw;
+	padding-top: 15vh;
+	padding-bottom: 5vh;
+    margin-left: 15vw;
+    margin-top: 12vh;
+	
+}
+
+#email {
+	margin: 1vh;
+}
+
+#senha {
+	margin: 1vh;
+}
+
+#Entrar {
+	display: block;
+	margin-top: 1vh;
+	margin: 1vh;
+	background-color: rgba(0, 0, 255, 0.719);
+	border: none;
+	color:#ffffff;
+	padding: 1vh;
+}
+
+#botaologin {
+	display: inline-block;
+	position: absolute;
+	margin-top: 0vh;
+    margin-left: 60vw;
+	background-color: rgba(0, 0, 255, 0.719);
+	border: none;
+	color:#ffffff;
+	padding: 0.8vh;
+
+}

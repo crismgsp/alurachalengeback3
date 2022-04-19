@@ -1,0 +1,60 @@
+body {
+    background-color: rgba(207, 209, 209, 0.161);
+}
+
+#cabecalho {
+    display: inline-block;
+}
+
+#titulodiv{
+    display: inline-block;
+    width: 300px;
+    padding: 1vw;
+    padding-left: 15vw;
+    
+}
+
+#botaodiv {
+    display: inline-block;
+    position: absolute;
+    margin-top: 10vh;
+    margin-left: 35vw;
+
+}
+
+
+
+.jumbotron {
+    background-color: rgba(161, 200, 218, 0.464);
+    padding: 2vw;
+    border-style: solid;
+    border-color: black;
+}
+
+.custom-file-input {
+    
+    width: 32vw;
+}
+
+#tabelas {
+    display: flex;
+    width: 60%;
+    
+}
+
+#tabela1{
+    
+    display: block;
+   
+    
+}
+
+#tabela2 {
+    
+   display: block;
+}
+
+
+
+
+
