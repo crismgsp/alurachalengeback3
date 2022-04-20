@@ -32,7 +32,8 @@ $imprimirdata = $imprime->imprimirdata();
 
         <div id="cabecalho">
             <div id="titulodiv">
-                <h1 id="titulosuperior">Importar transações teste commit</h1> 
+                <h1 id="titulosuperior">Importar transações</h1> 
+                
             </div>
             
         </div>
@@ -46,6 +47,7 @@ $imprimirdata = $imprime->imprimirdata();
                         <input type="file" class="custom-file-input" id="customFile" name="file">
                         <label class="custom-file-label" for="customFile"></label>
                     </div>
+                    
                     <button type="submit" class="enviar">Enviar</button>
             </form>
         </div>
