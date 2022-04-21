@@ -1,8 +1,6 @@
 <?php
 
-$mysql = new mysqli('localhost', 'root', '', 'csv');
-$mysql-> set_charset('utf8');
-
+require 'config.php';
 
 
 class Imprime 

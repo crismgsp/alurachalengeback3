@@ -1,7 +1,6 @@
 <?php
 
-    $mysql = new mysqli('localhost', 'root', '', 'csv');
-    $mysql-> set_charset('utf8');
+    require 'config.php';
 
     $arquivo = $_FILES["file"]["tmp_name"];
     $nome = $_FILES["file"]["name"];

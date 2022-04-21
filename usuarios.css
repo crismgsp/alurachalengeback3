@@ -1,0 +1,35 @@
+#titulo {
+    
+    text-align: center;
+}
+
+#novo {
+	background-color: rgba(18, 141, 42, 0.501);
+	border-style: solid;
+    border-color: rgba(0, 0, 0, 0.642);
+	color:black;
+	padding: 0.5vh;
+    border-radius: 15px;
+
+}
+
+#editar {
+    background-color: rgba(255, 255, 0, 0.544);
+	border-style: solid;
+    border-color: rgba(0, 0, 0, 0.642);
+	color:black;
+	padding: 0.5vh;
+    border-radius: 15px;
+}
+
+#remover {
+    background-color: rgba(255, 0, 0, 0.602);
+	border-style: solid;
+    border-color: rgba(0, 0, 0, 0.642);
+	color:black;
+	padding: 0.5vh;
+    border-radius: 15px;
+}
+
+
+

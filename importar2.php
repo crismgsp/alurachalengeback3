@@ -13,7 +13,7 @@ $extensao = end($ext);
 if($extensao != "csv") {
     echo "Extensao invalida";
     }
-    else{
+    elseif{
         $objeto = fopen($arquivo, 'r');
 
         $tabela = fgetcsv($objeto, 1000, ",");

@@ -1,16 +1,3 @@
-<?php
-
-include 'service.php';
-
-
-$imprime = new Imprime($mysql);
-$imprimir = $imprime->imprimir();
-
-$imprimedata = new Imprime($mysql);
-$imprimirdata = $imprime->imprimirdata(); 
-
-
-?>
 
 
 <!DOCTYPE html>

@@ -2,7 +2,7 @@ const init = () => {
     
     const validaEmail = (evento) => {
         const input = evento.currentTarget;
-        const emailvalido = 'lojista@teste.com'; /*mexer nesta logica aqui pra algo do banco de dados ..talvez renomear o arquivo pra php e adaptar a logica*/
+        const emailvalido = 'lojista@teste.com'; /*mexer nesta logica aqui pra algo do banco de dados ..talvez renomear o arquivo pra php e adaptar a logica*/ (buscar usuarios no banco dados)
         
         if(input.value != emailvalido) {
             submitButton.setAttribute('disabled', 'disabled');
@@ -14,7 +14,7 @@ const init = () => {
 
     const validaSenha = (evento) => {
         const input = evento.currentTarget;
-        const senhavalida = '12345678'
+        const senhavalida = '12345678'   /* (buscar senha do mesmo id do usuario acima pra comparar ...tem que ser igual) */
         
         if(input.value != senhavalida) {
             submitButton.setAttribute('disabled', 'disabled');
