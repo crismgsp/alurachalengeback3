@@ -3,15 +3,15 @@
 class Usuarios
 {
     private $mysql;
-    public function __construtct(mysqli $mysql)
+    public function __construct(mysqli $mysql)
     {
         $this->mysql = $mysql;
     }
 
-    public function adicionarusuario(string $Nome, string $Email, string $Status) : void 
+    public function adicionarusuario(int $ID, string $Nome, string $Email, string $Statuss) : void 
     {
-        $insereUsuario = $this->mysql->prepare('INSERT INTO usuarios (Nome, Email, Status) VALUES(?,?);');
-        $insereUsuario->bind_param('sss', $Nome, $Email, $Status);
+        $insereUsuario = $this->mysql->prepare('INSERT INTO usuarios (ID, Nome, Email, Statuss) VALUES(?,?,?, ?);');
+        $insereUsuario->bind_param('isss', $ID, $Nome, $Email, $Statuss);
         $insereUsuario->execute();
     }
 

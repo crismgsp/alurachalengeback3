@@ -3,9 +3,9 @@
 require 'config.php';
 require 'Usuarioscontroller.php';
 
-if($_SERVER['REQUEST_METHOD'] ==='POST') {
-	$usuario = new Usuarios($mysql);
-	$usuario->adicionarusuario($_POST['Nome'], $_POST['Email'], $_POST['Status']);
+if ($_SERVER['REQUEST_METHOD'] ==='POST') {
+	$inserirus = new Usuarios($mysql);
+	$inserirus->adicionarusuario($_POST['ID'], $_POST['Nome'], $_POST['Email'], $_POST['Statuss']);
 }
 ?>
 
@@ -32,7 +32,7 @@ if($_SERVER['REQUEST_METHOD'] ==='POST') {
 
         <header>
 	
-			<a href="usuarioscadastrados.php"><button  id="administrador">Botao deixar aqui</button></a>
+			<a href="usuarioscadastrados.php"><button  id="administrador">Ver usuários cadastrados</button></a>
 			
 				
 		</header>	
@@ -42,12 +42,14 @@ if($_SERVER['REQUEST_METHOD'] ==='POST') {
         
         <form action="cadastrarusuarios.php" method="post" class ="formadicionar" data-form>
            
+			
+			<input type="text" class="nomepreco"  required placeholder="ID" name="ID" > 
 
             <input type="text" class="nomepreco"  required placeholder="Nome Completo" name="Nome" > 
 
             <input type="text" class="nomepreco"  required placeholder="Email nome@email.com" name="Email" >
 
-			<input type="text" class="nomepreco"  required placeholder="Status 1" name="Status" >
+			<input type="text" class="nomepreco"  required placeholder="Status 1" name="Statuss" >
                         
             <input type="submit" value="Adicionar usuario" class="botaoadiciona">	
 

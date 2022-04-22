@@ -3,8 +3,8 @@
 require 'config.php';
 require 'Usuarioscontroller.php';
 
-$usuario = new Usuarios($mysql);
-$usuarios = $usuario->exibirTodos();
+$usuariomostra = new Usuarios($mysql);
+$usuarios = $usuariomostra->exibirTodos();
 
 ?>
 
@@ -29,7 +29,7 @@ $usuarios = $usuario->exibirTodos();
 
     <h1 id="titulo">USUÁRIOS CADASTRADOS</h1>
 
-    <a href="cadastrarusuarios.html"><button id="novo">Novo usuário</button></a>
+    <a href="cadastrarusuarios.php"><button id="novo">Novo usuário</button></a>
 
     <div class="tabelausuarios">
         <table class="table">
@@ -43,19 +43,19 @@ $usuarios = $usuario->exibirTodos();
             </tr>
             </thead>
             <tbody>
-            <?php foreach($usuarios as $usuario) ?>
-            {
+                <?php foreach ($usuarios as $usuariomostra) : ?>
+            
                 <tr>
-                <td><?php echo $usuario['ID'];?></td>
-                <td><?php echo $usuario['Nome'];?></td>
-                <td><?php echo $usuario['Email'];?></td>
+                <td><?php echo $usuariomostra['ID'];?></td>
+                <td><?php echo $usuariomostra['Nome'];?></td>
+                <td><?php echo $usuariomostra['Email'];?></td>
                 <td><a href="cadastrarusuarios.php?id=<?php echo $usuario['ID'] ?>"> <button id="editar">Editar</button></a>          
                 <a href="removerusuario.php"><button id="remover">Excluir</button></a> </td>
 
 
                 </tr>
-            }
-            <"?php endforeach ?"">
+                <?php endforeach; ?>
+            
             </tbody>
         </table>
     </div>
