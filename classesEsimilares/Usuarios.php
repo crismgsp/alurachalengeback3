@@ -8,10 +8,10 @@ class Usuarios
         $this->mysql = $mysql;
     }
 
-    public function adicionarusuario( int $ID, string $Nome, string $Email, string $Statuss, string $Senha) : void 
+    public function adicionarusuario(  string $Nome, string $Email, string $Statuss, string $Senha) : void 
     {
-        $insereUsuario = $this->mysql->prepare('INSERT INTO usuarios ( ID,Nome, Email, Statuss, Senha) VALUES(?,?,?,?, ?);');
-        $insereUsuario->bind_param('issss',$ID, $Nome, $Email, $Statuss, $Senha);
+        $insereUsuario = $this->mysql->prepare('INSERT INTO usuarios ( Nome, Email, Statuss, Senha) VALUES(?,?,?,?);');
+        $insereUsuario->bind_param('ssss', $Nome, $Email, $Statuss, $Senha);
         $insereUsuario->execute();
     }
 

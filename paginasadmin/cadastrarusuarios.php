@@ -12,7 +12,7 @@ if($adiciona) {
 if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 	$inserirus = new Usuarios($mysql);
 	$_POST['Senha']= password_hash($_POST['Senha'], PASSWORD_BCRYPT);
-	$inserirus->adicionarusuario($_POST['ID'],$_POST['Nome'], $_POST['Email'], $_POST['Statuss'], $_POST['Senha']);
+	$inserirus->adicionarusuario($_POST['Nome'], $_POST['Email'], $_POST['Statuss'], $_POST['Senha']);
 }
 
 
@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
         
         <form action="cadastrarusuarios.php" method="post" class ="formadicionar" data-form>
            
-		<input type="text" class="nomepreco"  required placeholder="ID" name="ID" > 
+		
 
 			
 			<input type="text" class="nomepreco"  required placeholder="Nome Completo" name="Nome" > 

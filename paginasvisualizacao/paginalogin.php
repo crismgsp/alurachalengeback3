@@ -1,3 +1,10 @@
+<?php
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt">
  
@@ -15,14 +22,14 @@
 
         <div id="iniciosessao">
                         
-            <form class ="formlogin" data-login>
+            <form action="../classesEsimilares/login.php" method="POST" class ="formlogin" data-login>
 
                 <h3 id="textoiniciarsessao">Iniciar Sessão</h3>
                 <label for="email"></label>
-                <input type="text" id="email" data-email class="input-padrao" required placeholder="Escreva seu email">
+                <input type="text" id="email" data-email class="input-padrao" required placeholder="Escreva seu email" name="Nome">
 
                 <label for="senha"></label>
-                <input type="text" id="senha" data-senha class="input-padrao" required placeholder="Escreva sua senha">
+                <input type="text" id="senha" data-senha class="input-padrao" required placeholder="Escreva sua senha"name="Senha">
 
                 <input type="submit" value="Entrar" data-entrar id="Entrar ">	
 

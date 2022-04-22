@@ -27,8 +27,6 @@ Ainda preciso aprender para estas 2 primeiras semanas:
 
 validação de dados antes de enviar para o banco de dados --> para isso preciso entender melhor como acessar cada linha e coluna do arquivo csv através dos comandos de php, criar a lógica e eliminar as colunas que não se adequam às condições do arquivo que recebeu o csv para depois importar.
 criar senhas de forma automatica e que fiquem armarzenadas de forma criptografada no banco, e a senha deve ser enviada automaticamente para o usuario.
-criei a chave primaria e coloquei autoincrement mas ao criar usuario nao está incrementando o id...sempre ta indo 0, ai da conflito no proximo usuario, irei ler algo sobre isso (pois estou tentando inserir o id na hora de criar)
-...... e mais coisas que ainda nao tentei fazer...
 
 
 
