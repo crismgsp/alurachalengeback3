@@ -1,7 +1,7 @@
 <?php
 
-require 'config.php';
-require 'Usuarioscontroller.php';
+require '../config.php';
+require '../classes/Usuarios.php';
 
 if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 	$inserirus = new Usuarios($mysql);

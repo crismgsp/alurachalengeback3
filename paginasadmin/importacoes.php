@@ -27,7 +27,7 @@
 
         <div class="container">
             
-            <form action="importar.php" method="post" enctype="multipart/form-data">
+            <form action="../classesEsimilares/importar.php" method="post" enctype="multipart/form-data">
                 <div class="jumbotron">
                 <h2>Upload do CSV</h2>
                     <div class="custom-file">

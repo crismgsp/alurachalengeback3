@@ -26,6 +26,8 @@ if($extensao != "csv") {
             }
         }
 
+        /*testando validacoes antes de importar */
+
        
         /*$linha1 = $tabela[0];
 

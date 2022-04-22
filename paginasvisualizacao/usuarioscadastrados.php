@@ -1,7 +1,7 @@
 <?php
 
-require 'config.php';
-require 'Usuarioscontroller.php';
+require '../config.php';
+require '../classesEsimilares/Usuarios.php';
 
 $usuariomostra = new Usuarios($mysql);
 $usuarios = $usuariomostra->exibirTodos();
@@ -16,8 +16,8 @@ $usuarios = $usuariomostra->exibirTodos();
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="usuarios.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/usuarios.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -29,7 +29,7 @@ $usuarios = $usuariomostra->exibirTodos();
 
     <h1 id="titulo">USUÁRIOS CADASTRADOS</h1>
 
-    <a href="cadastrarusuarios.php"><button id="novo">Novo usuário</button></a>
+    <a href="../paginasadmin/cadastrarusuarios.php"><button id="novo">Novo usuário</button></a>
 
     <div class="tabelausuarios">
         <table class="table">
@@ -49,8 +49,8 @@ $usuarios = $usuariomostra->exibirTodos();
                 <td><?php echo $usuariomostra['ID'];?></td>
                 <td><?php echo $usuariomostra['Nome'];?></td>
                 <td><?php echo $usuariomostra['Email'];?></td>
-                <td><a href="cadastrarusuarios.php?id=<?php echo $usuario['ID'] ?>"> <button id="editar">Editar</button></a>          
-                <a href="removerusuario.php"><button id="remover">Excluir</button></a> </td>
+                <td><a href="../paginasadmin/editarusuarios.php?id=<?php echo $usuariomostra['ID'] ?>"> <button id="editar">Editar</button></a>          
+                <a href="../paginasadmin/removerusuario.php?id=<?php echo $usuariomostra['ID'] ?>"><button id="remover">Excluir</button></a> </td>
 
 
                 </tr>

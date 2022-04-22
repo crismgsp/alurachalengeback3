@@ -1,6 +1,6 @@
 <?php
 
-    require 'config.php';
+    require '../config.php';
 
     $arquivo = $_FILES["file"]["tmp_name"];
     $nome = $_FILES["file"]["name"];
