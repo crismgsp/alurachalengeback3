@@ -2,28 +2,38 @@
 
 require '../config.php';
 
-if(empty($_POST['Nome']) || empty($_POST['Senha'])) {
+if(empty($_POST['Email']) || empty($_POST['Senha'])) {
     header('Location: ../paginasvisualizacao/paginalogin.php');
     exit();
 }
 
-$Nome = mysqli_real_escape_string($mysql, $_POST['Nome']);
-$Senha = mysqli_real_escape_string($mysql, $_POST['Senha']);
+/*$Email = mysqli_real_escape_string($mysql, $_POST['Email']);
 
-$query = "select * from usuarios where Nome ={$Nome} and Senha = {$Senha}';
+$Senha = mysqli_real_escape_string($mysql, $_POST['Senha']);*/
+
+
+$query = sprintf(
+    "SELECT Senha FROM usuarios WHERE Email='%s'",
+    mysqli_real_escape_string($mysql, $_POST['Email'])
+);
 
 $result = mysqli_query($mysql, $query);
 
-$row = mysqli_num_rows($result);
 
-echo $row;exit;
 
-if($row ==1) {
-    $_SESSION[Nome] = $Nome;
-    header('Location: ../paginasadmin/importacoes.php')
-    exit();
-}else { 
-    header:('Location: ../paginasvisualizacao/paginalogin.php');
-    exit();   
+if (!$result) {
+    $message  = 'Invalid query: ' . mysql_error() . "\n";
+    $message .= 'Whole query: ' . $query;
+    die($message);
 }
 
+$row = mysqli_fetch_row($result);
+
+
+
+if (password_verify($_POST['Senha'], $row[0]))  {
+    header('Location: ../paginasadmin/importacoes.php');
+    exit();
+}else {
+    echo $row;
+}

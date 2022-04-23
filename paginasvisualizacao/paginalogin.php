@@ -26,7 +26,7 @@
 
                 <h3 id="textoiniciarsessao">Iniciar Sessão</h3>
                 <label for="email"></label>
-                <input type="text" id="email" data-email class="input-padrao" required placeholder="Escreva seu email" name="Nome">
+                <input type="text" id="email" data-email class="input-padrao" required placeholder="Escreva seu email" name="Email">
 
                 <label for="senha"></label>
                 <input type="text" id="senha" data-senha class="input-padrao" required placeholder="Escreva sua senha"name="Senha">
@@ -38,6 +38,6 @@
         </div>
 
     </body>
-    <script  src="validalogin.js"></script>
+    
 
 </html> 
