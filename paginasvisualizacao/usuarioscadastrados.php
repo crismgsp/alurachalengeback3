@@ -58,6 +58,9 @@ $usuarios = $usuariomostra->exibirTodos();
             
             </tbody>
         </table>
+
+        <a href="../paginasadmin/importacoes.php"><button >Voltar</button></a>        
+
     </div>
 
     </body>

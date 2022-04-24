@@ -25,12 +25,22 @@
                 $Valor = utf8_encode($dados[6]);
                 $DataeHora = utf8_encode($dados[7]);
                 
-                
-                
-             
-                $result = $mysql->query("INSERT INTO transacoes (BancoOrigem, AgenciaOrigem, ContaOrigem, BancoDestino, AgenciaDestino, ContaDestino, Valor, DataeHora
-                 ) VALUES ('$BancoOrigem', '$AgenciaOrigem', '$ContaOrigem', '$BancoDestino', '$AgenciaDestino', '$ContaDestino',
-                '$Valor', '$DataeHora')");
+                $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
+
+
+                $explodeurl = explode("=", $url);
+
+                 
+                $usuariomodificado = $explodeurl[1];
+                            
+                $usuariomodificado2 = str_replace("%27", " ", $usuariomodificado);
+
+                $usuario = str_replace("%20", " ", $usuariomodificado);
+
+            
+                $result = $mysql->query("INSERT INTO transacoes (BancoOrigem, AgenciaOrigem, ContaOrigem, BancoDestino, AgenciaDestino, ContaDestino, Valor, DataeHora,
+                Usuario ) VALUES ('$BancoOrigem', '$AgenciaOrigem', '$ContaOrigem', '$BancoDestino', '$AgenciaDestino', '$ContaDestino',
+                '$Valor', '$DataeHora', '$usuario')");
             }
 
             if ($result){

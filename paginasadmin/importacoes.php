@@ -27,15 +27,28 @@
         </div>
 
         <div class="container">
+
+            <?php
+            $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
+            $explodeurl = explode("=", $url);
+
+                            
+            $usuariomodificado = $explodeurl[1];
             
-            <form action="../classesEsimilares/importar.php" method="post" enctype="multipart/form-data">
+            $usuario = str_replace("%27", " ", $usuariomodificado);
+            
+
+            ?>
+
+                            
+            <form action="../classesEsimilares/importar.php?Nome = <?php echo $usuario ?>" method="post" enctype="multipart/form-data">
                 <div class="jumbotron">
                 <h2>Upload do CSV</h2>
                     <div class="custom-file">
                         <input type="file" class="custom-file-input" id="customFile" name="file">
                         <label class="custom-file-label" for="customFile"></label>
                     </div>
-                    
+                
                     <button type="submit" class="enviar">Enviar</button>
             </form>
         </div>
@@ -44,7 +57,7 @@
                 <button id="botaoacesso">Ver importações</button></a>  </p>
 
         <p>Para cadastrar usuários ou ver os cadastrados clique aqui <a href="cadastrarusuarios.php">
-        <button id="botaoacesso">Ver importações</button></a>  </p>        
+        <button id="botaoacesso">Ver usuarios ou cadastrar</button></a>  </p>        
 
         
 

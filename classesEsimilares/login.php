@@ -9,7 +9,7 @@ if(empty($_POST['Email']) || empty($_POST['Senha'])) {
 
 
 $query = sprintf(
-    "SELECT Senha FROM usuarios WHERE Email='%s'",
+    "SELECT Senha, Nome FROM usuarios WHERE Email='%s'",
     mysqli_real_escape_string($mysql, $_POST['Email'])
 );
 
@@ -24,9 +24,12 @@ if (!$result) {
 
 $row = mysqli_fetch_row($result);
 
+$Nome = $row[1];
+
+
 
 if (password_verify($_POST['Senha'], $row[0]))  {
-    header('Location: ../paginasadmin/importacoes.php');
+    header("Location: ../paginasadmin/importacoes.php?Nome='$Nome'");
     exit();
 }else {
     echo "Usuario ou senha não existem";
