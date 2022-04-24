@@ -36,7 +36,15 @@
 
         public function dadoscompletos () : array
         {
-            $resultadodados = $this->mysql->query('SELECT * FROM transacoes GROUP BY DataHoraImportacao');
+            $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
+            $explodeurl = explode("=", $url);
+            $DataImportacaoalt = $explodeurl[1];
+            
+            $DataImportacao = str_replace("%20", " ", $DataImportacaoalt);
+            
+            
+
+            $resultadodados = $this->mysql->query("SELECT * FROM transacoes WHERE DataHoraImportacao = '$DataImportacao'");
             $imprimirdados = $resultadodados->fetch_all(MYSQLI_ASSOC);
         
             return $imprimirdados;

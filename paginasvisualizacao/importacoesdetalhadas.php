@@ -29,4 +29,29 @@ $imprime = $imprimedados->dadoscompletos();
 
     <body>
 
-        
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Banco de Origem</th>
+                <th scope="col">Agencia de Origem</th>
+                <th scope="col">Conta de Origem</th>
+                
+
+
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($imprime as $imprimirdados) : ?>
+                <tr>
+                    <?php echo $imprimirdados['BancoOrigem']; ?>
+                    <?php echo $imprimirdados['AgenciaOrigem']; ?>
+                    <?php echo $imprimirdados['ContaOrigem']; ?>
+                </tr>
+            <?php endforeach; ?> 
+        </tbody>
+    </table>
+    
+    </body>      
+    
+</html>    
+    
