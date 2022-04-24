@@ -20,7 +20,7 @@ $imprime = $imprimedados->dadoscompletos();
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="../assets/css/style.css">
-        <link rel="stylesheet" href="../assets/css/login.css">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -29,13 +29,18 @@ $imprime = $imprimedados->dadoscompletos();
 
     <body>
 
-    <table class="table">
+    <table class="table" >
         <thead>
             <tr>
                 <th scope="col">Banco de Origem</th>
                 <th scope="col">Agencia de Origem</th>
                 <th scope="col">Conta de Origem</th>
-                
+                <th scope="col">Banco de Destino</th>
+                <th scope="col">Agencia de Destino</th>
+                <th scope="col">Conta de Destino</th>
+                <th scope="col">Valor</th>
+                <th scope="col">Data e Hora da transação</th>
+                <th scope="col">Data e Hora da Importação</th>
 
 
             </tr>
@@ -43,9 +48,16 @@ $imprime = $imprimedados->dadoscompletos();
         <tbody>
             <?php foreach ($imprime as $imprimirdados) : ?>
                 <tr>
-                    <?php echo $imprimirdados['BancoOrigem']; ?>
-                    <?php echo $imprimirdados['AgenciaOrigem']; ?>
-                    <?php echo $imprimirdados['ContaOrigem']; ?>
+                    <td><?php echo $imprimirdados['BancoOrigem']; ?></td>
+                    <td><?php echo $imprimirdados['AgenciaOrigem']; ?></td>
+                    <td><?php echo $imprimirdados['ContaOrigem']; ?></td>
+                    <td><?php echo $imprimirdados['BancoDestino']; ?></td>
+                    <td><?php echo $imprimirdados['AgenciaDestino']; ?></td>
+                    <td><?php echo $imprimirdados['ContaDestino']; ?></td>
+                    <td><?php echo $imprimirdados['Valor']; ?></td>
+                    <td><?php echo $imprimirdados['DataeHora']; ?></td>
+                    <td><?php echo $imprimirdados['DataHoraImportacao']; ?></td>
+
                 </tr>
             <?php endforeach; ?> 
         </tbody>
