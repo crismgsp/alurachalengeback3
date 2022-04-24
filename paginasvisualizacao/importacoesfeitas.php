@@ -1,8 +1,8 @@
 <?php
 
-include 'classeseSimilares/service.php';
+include '../classeseSimilares/service.php';
 
-require 'config.php';
+require '../config.php';
 
 
 $imprime = new Imprime($mysql);
@@ -23,8 +23,8 @@ $imprimirdata = $imprime->imprimirdata();
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/login.css">
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/login.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -33,13 +33,15 @@ $imprimirdata = $imprime->imprimirdata();
 
     <body>
 
+        
+
 
         <div id="informacoes">
 
             <div id="cabecalho">
                 <h1> Importações realizadas</h1>
                 
-                <a href="paginasvisualizacao/paginalogin.html"><button type="button"  id="botaologin">Login</button></a> 
+                <a href="../index.php"><button type="button"  id="botaologin">Voltar para página inicial</button></a> 
                 
             </div>
 
@@ -96,6 +98,9 @@ $imprimirdata = $imprime->imprimirdata();
                                         
                                         <?php echo $import['DataHoraImportacao']; ?>
                                             
+                                    </td>
+                                    <td>
+                                        <a href="importacoesdetalhadas.php?DataHoraImportacao=<?php echo $import['DataHoraImportacao'] ?>"><Button>Ver detalhes</Button></a>
                                     </td>
                                     <?php endforeach; ?>         
                                 </tr>      

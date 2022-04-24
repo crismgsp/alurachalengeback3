@@ -33,8 +33,16 @@
             
             return $imprimirdata; 
         }  
+
+        public function dadoscompletos () : array
+        {
+            $resultadodados = $this->mysql->query('SELECT * FROM transacoes GROUP BY DataHoraImportacao');
+            $imprimirdados = $resultadodados->fetch_all(MYSQLI_ASSOC);
         
-        
+            return $imprimirdados;
+
+        }
+            
     }
 
 ?>

@@ -7,10 +7,6 @@ if(empty($_POST['Email']) || empty($_POST['Senha'])) {
     exit();
 }
 
-/*$Email = mysqli_real_escape_string($mysql, $_POST['Email']);
-
-$Senha = mysqli_real_escape_string($mysql, $_POST['Senha']);*/
-
 
 $query = sprintf(
     "SELECT Senha FROM usuarios WHERE Email='%s'",
