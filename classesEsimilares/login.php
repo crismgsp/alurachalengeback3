@@ -16,7 +16,6 @@ $query = sprintf(
 $result = mysqli_query($mysql, $query);
 
 
-
 if (!$result) {
     $message  = 'Invalid query: ' . mysql_error() . "\n";
     $message .= 'Whole query: ' . $query;
@@ -24,7 +23,6 @@ if (!$result) {
 }
 
 $row = mysqli_fetch_row($result);
-
 
 
 if (password_verify($_POST['Senha'], $row[0]))  {
