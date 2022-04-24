@@ -31,5 +31,5 @@ if (password_verify($_POST['Senha'], $row[0]))  {
     header('Location: ../paginasadmin/importacoes.php');
     exit();
 }else {
-    echo $row;
+    echo "Usuario ou senha não existem";
 }

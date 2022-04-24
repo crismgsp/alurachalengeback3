@@ -41,7 +41,7 @@ $imprimirdata = $imprime->imprimirdata();
             <div id="cabecalho">
                 <h1> Importações realizadas</h1>
                 
-                <a href="../index.php"><button type="button"  id="botaologin">Voltar para página inicial</button></a> 
+                <a href="../index.html"><button type="button"  id="botaologin">Voltar para página inicial</button></a> 
                 
             </div>
 
@@ -100,7 +100,7 @@ $imprimirdata = $imprime->imprimirdata();
                                             
                                     </td>
                                     <td>
-                                        <a href="importacoesdetalhadas.php?DataHoraImportacao=<?php echo $import['DataHoraImportacao'] ?>"><Button>Ver detalhes</Button></a>
+                                        <a href="importacoesdetalhadas.php?DataHoraImportacao=<?php echo $import['DataHoraImportacao'] ?>"><Button class="detalhaimportacao">Ver detalhes</Button></a>
                                     </td>
                                     <?php endforeach; ?>         
                                 </tr>      

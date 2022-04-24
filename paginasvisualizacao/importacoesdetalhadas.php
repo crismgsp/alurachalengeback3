@@ -62,6 +62,8 @@ $imprime = $imprimedados->dadoscompletos();
             <?php endforeach; ?> 
         </tbody>
     </table>
+
+    <a href="importacoesfeitas.php"><button>Voltar para importações feitas</button></a>
     
     </body>      
     

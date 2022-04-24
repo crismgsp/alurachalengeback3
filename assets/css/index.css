@@ -1,0 +1,45 @@
+
+
+#cabecalho{
+	width: 100%;
+	display: inline-block;
+    text-align: center;
+}
+
+#bemvindo {
+	width: 80%;
+	display: inline-block;
+}
+
+#acesso {
+    width: 50vw;
+    background-color: rgba(112, 128, 122, 0.284);
+    padding: 10vw;
+    padding-left: 20vw;
+    margin-left: 10vw;
+}
+
+
+#botaologin {
+	display: inline-block;
+	background-color: rgba(0, 0, 255, 0.719);
+	border-style: solid;
+    border-color:rgba(12, 12, 34, 0.81);
+	color: #ffffff;
+	padding: 0.8vh;
+    border-radius: 15px;
+
+}
+
+#botaoacesso {
+	display: inline-block;
+	background-color: rgba(0, 0, 255, 0.719);
+	border-style: solid;
+    border-color:rgba(12, 12, 34, 0.81);
+	color: #ffffff;
+	padding: 0.5vh;
+    border-radius: 15px;
+
+}
+
+
