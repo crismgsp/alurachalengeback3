@@ -18,7 +18,7 @@ class Usuarios
     public function exibirTodos(): array
     {
 
-        $resultado = $this->mysql->query('SELECT ID, Nome, Email FROM usuarios');   
+        $resultado = $this->mysql->query("SELECT ID, Nome, Email FROM `usuarios` WHERE `Nome` != 'Admin'");   
              
         $usuarios = $resultado->fetch_all(MYSQLI_ASSOC);
 
@@ -26,9 +26,9 @@ class Usuarios
 
     }
 
-    public function encontrarPorId(string $id) : array
+    public function encontrarPorId(string $id): array
     {
-        $selecionaUsuario = $this->mysql->prepare("SELECT ID, Nome, Email FROM usuarios WHERE id= ?");
+        $selecionaUsuario = $this->mysql->prepare("SELECT id, Nome, Email FROM usuarios WHERE id= ?");
         $selecionaUsuario->bind_param('s', $id);
         $selecionaUsuario->execute();
         $usuario = $selecionaUsuario->get_result()->fetch_assoc();

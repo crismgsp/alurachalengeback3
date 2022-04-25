@@ -15,6 +15,8 @@ Ainda preciso aprender para este projeto:
 Validação de dados antes de enviar para o banco de dados --> para isso preciso entender melhor como acessar cada linha e coluna do arquivo csv através dos comandos de php, criar a lógica e eliminar as colunas que não se adequam às condições do arquivo que recebeu o csv para depois importar.
 criar senhas de forma automatica e que fiquem armazenadas de forma criptografada no banco, e a senha deve ser enviada automaticamente para o usuario.
 
+Falta fazer: a parte de editar e excluir usuario...no caso o excluir quero colocar um comando que muda o status de 1 para 2 e tenho que colocar nas regras pra importar planilha e tambem pra incluir usuario pro usuario poder inserir tem que estar com Statuss 1
+
 
 
 
