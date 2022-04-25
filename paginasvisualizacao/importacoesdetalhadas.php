@@ -29,6 +29,8 @@ $imprime = $imprimedados->dadoscompletos();
 
     <body>
 
+
+
     <table class="table" >
         <thead>
             <tr>
@@ -41,6 +43,7 @@ $imprime = $imprimedados->dadoscompletos();
                 <th scope="col">Valor</th>
                 <th scope="col">Data e Hora da transação</th>
                 <th scope="col">Data e Hora da Importação</th>
+                <th scope="col">Usuário responsável</th>
 
 
             </tr>
@@ -57,6 +60,7 @@ $imprime = $imprimedados->dadoscompletos();
                     <td><?php echo $imprimirdados['Valor']; ?></td>
                     <td><?php echo $imprimirdados['DataeHora']; ?></td>
                     <td><?php echo $imprimirdados['DataHoraImportacao']; ?></td>
+                    <td><?php echo $imprimirdados['Usuario']; ?></td>
 
                 </tr>
             <?php endforeach; ?> 
