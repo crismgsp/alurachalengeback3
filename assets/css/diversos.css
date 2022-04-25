@@ -1,0 +1,41 @@
+/*pagina de exclusao */
+
+#divexclusao {
+    padding-left: 10vw;
+    padding-top: 10vh;
+    
+
+}
+
+#mudastatuss {
+    background-color: red;
+	border-style: solid;
+    border-color: rgba(0, 0, 0, 0.642);
+	color:black;
+	padding: 0.5vh;
+    border-radius: 15px;
+
+}
+
+/*pagina de exclusao */
+
+#diveditar {
+    padding-left: 10vw;
+    padding-top: 10vh;
+    
+
+}
+
+#textoedicao {
+    width: 50vw;;
+    padding-left: 20vw;
+}
+
+.botaoaedita {
+    background-color: yellow;
+	border-style: solid;
+    border-color: rgba(0, 0, 0, 0.642);
+	color:black;
+	padding: 0.5vh;
+    border-radius: 15px;
+}

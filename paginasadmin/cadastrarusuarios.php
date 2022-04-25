@@ -13,6 +13,9 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 	$inserirus = new Usuarios($mysql);
 	$_POST['Senha']= password_hash($_POST['Senha'], PASSWORD_DEFAULT);
 	$inserirus->adicionarusuario($_POST['Nome'], $_POST['Email'], $_POST['Statuss'], $_POST['Senha']);
+
+	header('Location: ../paginasvisualizacao/usuarioscadastrados.php');
+	die();
 }
 
 
