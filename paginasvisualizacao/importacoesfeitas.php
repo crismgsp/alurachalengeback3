@@ -40,8 +40,21 @@ $imprimirdata = $imprime->imprimirdata();
 
             <div id="cabecalho">
                 <h1> Importações realizadas</h1>
+
+                <?php
+                $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
+                $explodeurl = explode("=", $url);
+
+                            
+                $usuariomodificado = $explodeurl[1];
+            
+                $usuario = str_replace("%27", " ", $usuariomodificado);
+            
+
+                ?>
+
                 
-                <a href="../index.html"><button type="button"  id="botaologin">Voltar para página inicial</button></a> 
+                <a href="../paginasadmin/importacoes.php?Nome = <?php echo $usuario ?>"><button type="button"  id="botaologin">Voltar</button></a> 
                 
             </div>
 

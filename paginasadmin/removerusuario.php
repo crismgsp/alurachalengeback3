@@ -7,7 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" href="../assets/css/diversos.css">
-        
+        <link rel="stylesheet" href="../assets/css/cadastro.css">
  
     </head>
 
@@ -15,12 +15,17 @@
 
         <div id="divexclusao">
 
-            <p> Deseja mesmo excluir o usuário? </p>
+        <p id="textoedicao"> Para "excluir" digite 2 no Status e clique no botão </p>
 
-            <button id="mudastatuss" name="mudastatuss">Remover</button></a> </td>
+            
+            <form action="cadastrarusuarios.php" method="post" class ="formadicionar" data-form>
 
-            aqui vai colocar que ao clicar no botao mudastattus muda o status de 1 para 2...no caso irá fazer uma edicao
+                <input type="text" class="nomepreco"  required placeholder="Status 1" name="Statuss" >
+                          
+                <input type="submit" id="mudastatuss" value="Excluir usuario" class="botaoaedita" name="mudastattus">	
 
+            </form>	
+  
         </div>
 
     </body>

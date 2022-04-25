@@ -67,7 +67,21 @@ $imprime = $imprimedados->dadoscompletos();
         </tbody>
     </table>
 
-    <a href="importacoesfeitas.php"><button>Voltar para importações feitas</button></a>
+    <?php
+
+    $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
+                $explodeurl = explode("=", $url);
+
+                            
+                $usuariomodificado = $explodeurl[1];
+            
+                $usuario = str_replace("%27", " ", $usuariomodificado);
+            
+
+    ?>
+
+ 
+    <a href="importacoesfeitas.php?Nome = <?php echo $usuario ?>"><button>Voltar para importações feitas</button></a>
     
     </body>      
     

@@ -39,3 +39,23 @@
 	padding: 0.5vh;
     border-radius: 15px;
 }
+
+/*pagina de importacao */
+
+#titulodiv {
+    
+    width: 100vw;
+    margin-left: 13vw;
+    display: inline-block;
+}
+
+#titulosuperior {
+    width: 30vw;
+    display: inline-block;
+}
+
+#logout {
+    display: inline-block;
+    
+
+}
