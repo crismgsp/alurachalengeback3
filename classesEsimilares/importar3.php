@@ -2,8 +2,8 @@
 
     require '../config.php';
 
-    function csvpraarray(): array
-    { 
+    function &csvpraarray(): array
+    {
         $arquivo = $_FILES["file"]["tmp_name"];
         $nome = $_FILES["file"]["name"];
     
@@ -22,22 +22,17 @@
             array_push($lista, $header);
 
             while($objeto1 = fgetcsv($objeto, 1000, ",") !== FALSE) {
-                    
-                $linha = fgetcsv($objeto1, 1000, ",");
-                    
+                
+                $linha = fgetcsv($objeto, 1000, ",");
+                
                 array_push($lista, $linha);
-    
             }
+            
             return $lista;
-
         }    
-          
-    } 
+    }
 
-    $listatotal = & csvpraarray(); 
-    
-    
-
+    $listatotal = &csvpraarray(); 
     
     
     function comparadata() :void
@@ -51,8 +46,6 @@
         $primeiralinhadata = $primeiralinha[7];
         $dataehorap = explode("T", $primeiralinhadata);
         $datap = $dataehorap[0];
-        
-    
 
         /*tirei o sprintf apos o = do query pra fazer um teste */
         $query = (
@@ -69,30 +62,24 @@
             die($message);
         }
         
-        $DataeHora = mysqli_fetch_all($result);
-
-        $linha = $DataeHora[0];
-        $stringlinha = implode("", $linha);
-        $databanco = substr($stringlinha, 0, 10);
+        $DataeHora = mysqli_fetch_all($result); /*tentando retornar todas datas diferentes 
+        mas os dados estao vindo de uma forma que eu tenho dificuldade pra trabalhar depois...voltar aqui
+        com calma outra hora...*/
+       
         
+
+        $datasgrupo = array();
+        foreach($DataeHora as $datahora) {
+            
+            $DataSemHora = substr($datahora, 0, 10);
+            array_push($datagrupo, $datasgrupo);
+        }
+
         
-       for ($i=0; $i <=100; $i++) {
-        $linha = $DataeHora[$i];
-        $stringlinha = implode("", $linha);
-        $databanco = substr($stringlinha, 0, 10);
-                
 
-            if($datap === $databanco) {
-                echo "Já foi feita importação com esta data";
-            }else {
-                echo "ainda não há importacao com esta data";
-            }
-        }    
-    }
+        var_dump($datasgrupo);
+        exit();
 
-    comparadata();
-
-/*
        
         $DataSemHora = substr($Datastring, 0, 10);
 
@@ -102,7 +89,7 @@
         exit();
 
        
-        if((strpos('$datap','$DataeHora') >= 0))   {
+        if($datap === $DataSemHora)  {
             echo "Já foi feita importação com esta data";
             
         }else{
@@ -110,7 +97,7 @@
         }    
     }
 
-    
+    comparadata();
     
         
             
@@ -120,18 +107,13 @@
                     
                     
                     $linhas = fgetcsv($objeto, 1000, ",");
-
-
-
                     $linhasdata = $linhas[7];
                     $dataehoralinhas = explode("T", $linhasdata);
                     $datal = $dataehoralinhas[0];
-
                                     
                     if($datal != $datap) ; {
                         unset($linhas);
                     }
-
                 
                     $BancoOrigem = utf8_encode($dados[0]);
                     $AgenciaOrigem = utf8_encode($dados[1]);
@@ -143,23 +125,17 @@
                     $DataeHora = utf8_encode($dados[7]);
                     
                     $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
-
-
                     $explodeurl = explode("=", $url);
-
                     
                     $usuariomodificado = $explodeurl[1];
                                 
                     $usuariomodificado2 = str_replace("%27", " ", $usuariomodificado);
-
                     $usuario = str_replace("%20", " ", $usuariomodificado);
-
                 
                     $result = $mysql->query("INSERT INTO transacoes (BancoOrigem, AgenciaOrigem, ContaOrigem, BancoDestino, AgenciaDestino, ContaDestino, Valor, DataeHora,
                     Usuario ) VALUES ('$BancoOrigem', '$AgenciaOrigem', '$ContaOrigem', '$BancoDestino', '$AgenciaDestino', '$ContaDestino',
                     '$Valor', '$DataeHora', '$usuario')");
             }
-
             if ($result){
                 echo "Dados inseridos com sucesso !!!";
             }else {
@@ -168,3 +144,15 @@
         
         
 ?>
+© 2022 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Docs
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
