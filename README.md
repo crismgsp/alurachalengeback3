@@ -1,6 +1,6 @@
 Participando do Chalenge Backend 3 da Alura.
-Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mais com consultas simples.
- A minha intenção em participar do Chalenge é aprender mais (e colocar o php que já  aprendi até o momento em prática), é ter um contato com a área de backend e ver as dificuldades.
+Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples).
+ A minha intenção em participar do Chalenge é aprender mais (e colocar o php que já  aprendi até o momento em prática), é ter um contato com a área de backend e ver as dificuldades. Tenho muita curiosidade de fazer um deploy em uma aplicacao de forma que funcione direitinho igual funciona quando testo no computador.
 
 
 O que já aprendi:
@@ -12,12 +12,13 @@ Coloquei o nome do usuario logado ao inserir o arquivo no upload.
 
 Ainda preciso aprender para este projeto:
 
-Validação de dados antes de enviar para o banco de dados --> para isso preciso entender melhor como acessar cada linha e coluna do arquivo csv através dos comandos de php, criar a lógica e eliminar as colunas que não se adequam às condições do arquivo que recebeu o csv para depois importar. Estou com muita dificuldades disso, já fiquei uns 3 dias tentando... tenho dificuldades de lidar com dados de array de foma eficiente...preciso estudar mais sobre arrays...puxei os dados das datas do banco de dados pra comparar e nao deixar inserir datas iguais mas estou com dificuldade de trabalhar com eles pois está vindo array de array....
+Validação de dados antes de enviar para o banco de dados --> para isso preciso entender melhor como acessar cada linha e coluna do arquivo csv através dos comandos de php, criar a lógica e eliminar as colunas que não se adequam às condições do arquivo que recebeu o csv para depois importar. Estou com muita dificuldades disso, já fiquei uns 3 dias tentando... 
 irei deixar o arquivo importar2.php de lado mais um tempo e voltarei a usar o importar.php ainda sem validacao para trabalhar em outras coisas por mais um tempo....
 criar senhas de forma automatica e que fiquem armazenadas de forma criptografada no banco, e a senha deve ser enviada automaticamente para o usuario.
 
 Hoje dia 26 de abril vou tentar fazer esta parte de edicao:
-Falta fazer: a parte de editar e excluir usuario...no caso o excluir quero colocar um comando que muda o status de 1 para 2 e tenho que colocar nas regras pra importar planilha e tambem pra incluir usuario pro usuario poder inserir tem que estar com Statuss 1
+Falta fazer: a parte de editar e excluir usuario...no caso o excluir quero colocar um comando que muda o status de 1 para 2 --> ainda farei
+(e tenho que colocar nas regras pra importar planilha e tambem pra incluir usuario pro usuario poder fazer login tem que estar com Statuss 1-> ja coloquei) resolvido por hoje
 
 
 
