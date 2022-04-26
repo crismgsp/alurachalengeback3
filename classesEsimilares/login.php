@@ -29,8 +29,7 @@ $Nome = $row[1];
 $Statuss = $row[2];
 
 
-
-if (password_verify($_POST['Senha'], $row[0]) && ($Statuss === 1))  {
+if (password_verify($_POST['Senha'], $row[0]) && $Statuss == 1)  {
     header("Location: ../paginasadmin/importacoes.php?Nome='$Nome'");
     exit();
 }else {
