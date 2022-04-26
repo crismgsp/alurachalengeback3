@@ -43,8 +43,23 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 	<body>
 
         <header>
+
+			<?php
+
+			$url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
+                $explodeurl = explode("=", $url);
+
+                            
+                $usuariomodificado = $explodeurl[1];
+            
+                $usuario = str_replace("%27", " ", $usuariomodificado);
+            
+
+                ?>
+
+               
 	
-			<a href="../paginasvisualizacao/usuarioscadastrados.php"><button  id="administrador">Ver usuários cadastrados</button></a>
+			<a href="../paginasvisualizacao/usuarioscadastrados.php?Nome = <?php echo $usuario ?>"><button  id="administrador">Ver usuários cadastrados</button></a>
 			
 				
 		</header>	

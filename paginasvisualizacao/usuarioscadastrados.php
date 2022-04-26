@@ -59,7 +59,19 @@ $usuarios = $usuariomostra->exibirTodos();
             </tbody>
         </table>
 
-        <a href="../paginasadmin/importacoes.php"><button >Voltar</button></a>        
+        <?php
+            $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
+            $explodeurl = explode("=", $url);
+
+                            
+            $usuariomodificado = $explodeurl[1];
+            
+            $usuario = str_replace("%27", " ", $usuariomodificado);
+            
+
+        ?>
+
+        <a href="../paginasadmin/importacoes.php?Nome = <?php echo $usuario ?>"><button >Voltar</button></a>        
 
     </div>
 

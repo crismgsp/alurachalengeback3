@@ -2,25 +2,62 @@
 
     require '../config.php';
 
-    $arquivo = $_FILES["file"]["tmp_name"];
-    $nome = $_FILES["file"]["name"];
+    /*function csvpraarray(): array */
 
-    $ext = explode(".", $nome);
+    
+        $arquivo = $_FILES["file"]["tmp_name"];
+        $nome = $_FILES["file"]["name"];
+    
+        $ext = explode(".", $nome);
+    
+        $extensao = end($ext);
+    
+        if($extensao != "csv") {
+            echo "Extensao invalida";
+        }else{
+            $objeto = fopen($arquivo, 'r');
+            $header = fgetcsv($objeto, 1000, ",");
+            
+            $lista = array();
 
-    $extensao = end($ext);
+            array_push($lista, $header);
 
-    if($extensao != "csv") {
-        echo "Extensao invalida";
-    }else{
-        $objeto = fopen($arquivo, 'r');
+            while($objeto1 = fgetcsv($objeto, 1000, ",") !== FALSE) {
+                
+                $linha = fgetcsv($objeto, 1000, ",");
+                
+                array_push($lista, $linha);
+            } 
+        }    
+       
 
-        $primeiralinha = fgetcsv($objeto, 1000, ",");
+    /*function comparadata() :void */
+    
+        $primeiralinha = $lista[0];
         $primeiralinhadata = $primeiralinha[7];
         $dataehorap = explode("T", $primeiralinhadata);
         $datap = $dataehorap[0];
 
-            while(($dados = fgetcsv($objeto, 1000, ",")) !== FALSE)
-                {
+        if($data === DataeHora do banco de dados)  (pesquisar como fazer esta comparacao) {
+            echo "Já foi feita importação com esta data"
+        }
+        else{
+            foreach($lista as $listainteira) {
+                $coluna = array_chunck()
+            }
+        }
+
+        
+
+    
+    
+
+   
+
+       
+
+        while(($dados = fgetcsv($objeto, 1000, ",")) !== FALSE)
+        {
                 
                 
                 
@@ -63,13 +100,13 @@
                 $result = $mysql->query("INSERT INTO transacoes (BancoOrigem, AgenciaOrigem, ContaOrigem, BancoDestino, AgenciaDestino, ContaDestino, Valor, DataeHora,
                 Usuario ) VALUES ('$BancoOrigem', '$AgenciaOrigem', '$ContaOrigem', '$BancoDestino', '$AgenciaDestino', '$ContaDestino',
                 '$Valor', '$DataeHora', '$usuario')");
-            }
+        }
 
             if ($result){
                 echo "Dados inseridos com sucesso !!!";
             }else {
                 echo "Ocorreu um erro ao inserir os dados";
             }
-    }
+        
 
 ?>
