@@ -38,7 +38,7 @@
     
     
     
-    function comparadata() : string
+    function comparadata() : void
     { 
 
         $mysql = new mysqli('localhost', 'root', '','csv');
@@ -67,9 +67,11 @@
         
         $DataeHora = mysqli_fetch_all($result);
 
+        /* este fiz so pra testar...como imprime data da primeira linha do 
+        banco de dados...deixei pra lembrar
         $linha = $DataeHora[0];
         $stringlinha = implode("", $linha);
-        $databanco = substr($stringlinha, 0, 10);
+        $databanco = substr($stringlinha, 0, 10); */
         
         
        for ($i=0; $i <= count($DataeHora); $i++) {
@@ -80,10 +82,11 @@
             
             if($datap === $databanco) {
                 echo "Já foi feita importação com esta data";
-            }else {
-               return $datap; 
+            } /*else {
+                aqui vou comparar a data da linha inicial com a data de cada linha da tabela
                 
-            }    
+            } */
+             
         }  
     }              
 
