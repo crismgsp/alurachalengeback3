@@ -28,7 +28,8 @@
                 array_push($lista, $linha);
             }
             
-            return $lista;
+            var_dump($lista);
+            exit();
         }    
     }
 

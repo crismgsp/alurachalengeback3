@@ -23,7 +23,7 @@
 
             while($objeto1 = fgetcsv($objeto, 1000, ",") !== FALSE) {
                     
-                $linha = fgetcsv($objeto1, 1000, ",");
+                $linha = fgetcsv($objeto, 1000, ",");
                     
                 array_push($lista, $linha);
     
@@ -37,11 +37,9 @@
     $listatotal = & csvpraarray(); 
     
     
-
     
-    
-    function comparadata() :void
-    {
+    function comparadata() : string
+    { 
 
         $mysql = new mysqli('localhost', 'root', '','csv');
         $mysql-> set_charset('utf8');
@@ -53,8 +51,6 @@
         $datap = $dataehorap[0];
         
     
-
-        /*tirei o sprintf apos o = do query pra fazer um teste */
         $query = (
             "SELECT DataeHora FROM transacoes GROUP BY DataeHora");
         
@@ -76,41 +72,25 @@
         $databanco = substr($stringlinha, 0, 10);
         
         
-       for ($i=0; $i <=100; $i++) {
+       for ($i=0; $i <= count($DataeHora); $i++) {
         $linha = $DataeHora[$i];
+       
         $stringlinha = implode("", $linha);
         $databanco = substr($stringlinha, 0, 10);
-                
-
+            
             if($datap === $databanco) {
                 echo "Já foi feita importação com esta data";
             }else {
-                echo "ainda não há importacao com esta data";
-            }
-        }    
-    }
+               return $datap; 
+                
+            }    
+        }  
+    }              
 
     comparadata();
 
 /*
-       
-        $DataSemHora = substr($Datastring, 0, 10);
-
-        echo $datap;
-        echo PHP_EOL;
-        echo $DataSemHora;
-        exit();
-
-       
-        if((strpos('$datap','$DataeHora') >= 0))   {
-            echo "Já foi feita importação com esta data";
-            
-        }else{
-            echo"Esta data nao existe ainda";
-        }    
-    }
-
-    
+   
     
         
             
