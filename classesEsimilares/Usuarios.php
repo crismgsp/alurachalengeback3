@@ -28,7 +28,7 @@ class Usuarios
 
     public function encontrarPorId(string $id): array
     {
-        $selecionaUsuario = $this->mysql->prepare("SELECT id, Nome, Email FROM usuarios WHERE id= ?");
+        $selecionaUsuario = $this->mysql->prepare("SELECT id, Nome, Email, Statuss FROM usuarios WHERE id= ?");
         $selecionaUsuario->bind_param('s', $id);
         $selecionaUsuario->execute();
         $usuario = $selecionaUsuario->get_result()->fetch_assoc();
@@ -38,7 +38,7 @@ class Usuarios
     public function editar(string $id, string $Nome, string $Email, string $Senha): void 
     {
         $editaUsuario = $this->mysql->prepare('UPDATE usuarios SET Nome = ?, Email = ?, Senha = ? WHERE id = ?');
-        $editaUsuario->bind_param('sss', $Nome, $Email, $Senha);
+        $editaUsuario->bind_param('ssss', $Nome, $Email, $Senha, $id);
         $editaUsuario->execute();
     }
 

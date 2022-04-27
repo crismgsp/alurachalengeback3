@@ -7,8 +7,12 @@ require '../classesEsimilares/redireciona.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $mudastatusUsuario = new Usuarios($mysql);
     $remove = $mudastatusUsuario->mudastatus($_POST['id'], $_POST['Statuss']);
+    
     redireciona('../paginasvisualizacao/usuarioscadastrados.php');
 }
+
+$usuario = new Usuarios($mysql);
+$user = $usuario->encontrarPorId($_GET['id']);
 
 
 ?>
@@ -35,13 +39,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     
             
-            <form action="removerusuario.php" method="post" class ="formadicionar" data-form>
+            <form action="removerusuario.php?id=<?php echo $user['id']?>" method="post" class ="formadicionar" data-form>
 
-                <input type="text" class="nomepreco"  required placeholder=" 1" name="id" value="<?php echo $_GET['id']; ?>">
+                <input type="hidden" class="nomepreco"   name="id" value="<?php echo $user['id']; ?>">
 
-                <input type="text" class="nomepreco"  required placeholder=" Status" name="Statuss" value="">
+                <input type="text" class="nomepreco"   name="Statuss" value="<?php echo $user['Statuss']; ?>">
                           
-                <input type="submit" id="mudastatuss" value="Excluir usuario" class="botaoaedita" name="mudastattus">	
+                <button id="mudastatuss" class="botaoaedita" name="mudastattus">Excluir usuario</button>	
 
             </form>	
   

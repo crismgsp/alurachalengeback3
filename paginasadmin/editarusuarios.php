@@ -4,8 +4,17 @@ require '../config.php';
 require '../classesEsimilares/Usuarios.php';
 require '../classesEsimilares/redireciona.php';
 
-$edita = new Usuarios($mysql);
-$editar = $edita->encontrarPorId($_GET['id']);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $edita = new Usuarios($mysql);
+    $editar = $edita->editar($_POST['id'], $_POST['Nome'], $_POST['Email'], $_POST['Senha']);
+
+    redireciona('../paginasvisualizacao/usuarioscadastrados.php');
+}
+
+
+
+$usuario = new Usuarios($mysql);
+$user = $usuario->encontrarPorId($_GET['id']);
 
 
 ?>
@@ -31,14 +40,17 @@ $editar = $edita->encontrarPorId($_GET['id']);
 
             <p id="textoedicao"> Edição do usuário </p>
 
-            <form action="editarusuarios.php" method="post" class ="formadicionar" data-form>
+            <form action="editarusuarios.php?id=<?php echo $user['id']?>"  method="post" class ="formadicionar" data-form>
            
-		
-                <input type="text" class="nomepreco"  required placeholder="Nome Completo" name="Nome" value="
-                <?php echo $editar['Nome']; ?>" > 
+                
+                <input type="hidden" class="nomepreco"   name="id" value="
+                <?php echo $user['id']; ?>" > 
+                
+                <input type="text" class="nomepreco"   name="Nome" value="
+                <?php echo $user['Nome']; ?>" > 
 
                 <input type="text" class="nomepreco"  required placeholder="Email nome@email.com" name="Email"
-                value= "<?php echo $editar['Email']; ?>" >
+                value= "<?php echo $user['Email']; ?>" >
 
                 <input type="text" class="nomepreco"  required placeholder="Digite a senha" name="Senha" >
                             
