@@ -43,33 +43,59 @@ $usuarios = $usuariomostra->exibirTodos();
             </tr>
             </thead>
             <tbody>
-                <?php foreach ($usuarios as $usuariomostra) : ?>
-            
-                <tr>
-                <td><?php echo $usuariomostra['ID'];?></td>
-                <td><?php echo $usuariomostra['Nome'];?></td>
-                <td><?php echo $usuariomostra['Email'];?></td>
-                <td><a href="../paginasadmin/editarusuarios.php?id=<?php echo $usuariomostra['ID'] ?>"> <button id="editar">Editar</button></a>          
-                <a href="../paginasadmin/removerusuario.php?id=<?php echo $usuariomostra['ID'] ?>"><button id="remover">Excluir</button></a> </td>
 
-
-                </tr>
-                <?php endforeach; ?>
-            
-            </tbody>
-        </table>
-
-        <?php
+            <?php
             $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
             $explodeurl = explode("=", $url);
 
                             
             $usuariomodificado = $explodeurl[1];
+
+            $usuariomodificado1 = str_replace("%20", " ", $usuariomodificado);
+
+            $usuariomodificado2 = str_replace(".php", "", $usuariomodificado1);
             
-            $usuario = str_replace("%27", " ", $usuariomodificado);
+            $usuariourl1 = str_replace("%27", " ", $usuariomodificado2);
+
             
 
-        ?>
+            $usuariourl = substr($usuariourl1, 2, 19);
+
+            
+            
+
+    
+            ?>
+
+                <?php foreach ($usuarios as $usuariomostra) : ?>
+            
+                    <tr>
+                    <td><?php echo $usuariomostra['ID'];?></td>
+                    <td><?php echo $usuariomostra['Nome'];?></td>
+                    <td><?php echo $usuariomostra['Email'];?></td>
+                    <td><a href="../paginasadmin/editarusuarios.php?id=<?php echo $usuariomostra['ID'] ?>"> <button id="editar">Editar</button></a>          
+                    
+                    
+                    <?php 
+                        if ($usuariourl === $usuariomostra['Nome']) { ?>
+                            <a href="usuarioscadastrados.php"><button id="remover">Excluir</button></a> 
+                        
+                    <?php 
+                        }else{ ?>
+                            <a href="../paginasadmin/removerusuario.php?id=<?php echo $usuariomostra['ID'] ?>">
+                            <button id="remover">Excluir</button></a> 
+                    <?php 
+                        }?>
+                    </td>    
+
+
+                    </tr>
+                <?php endforeach; ?>
+            
+            </tbody>
+        </table>
+
+        
 
         <a href="../paginasadmin/importacoes.php?Nome = <?php echo $usuario ?>"><button >Voltar</button></a>        
 
