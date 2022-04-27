@@ -45,7 +45,7 @@ class Usuarios
     public function mudastatus(string $id, string $Statuss): void 
     {
         $mudastatusUsuario = $this->mysql->prepare('UPDATE usuarios SET Statuss = ? WHERE id = ?');
-        $mudastatusUsuario->bind_param('ss', $id, $Statuss);
+        $mudastatusUsuario->bind_param('ss', $Statuss, $id);
         $mudastatusUsuario->execute();
     }
     

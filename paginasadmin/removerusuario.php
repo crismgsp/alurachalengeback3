@@ -45,7 +45,7 @@ $user = $usuario->encontrarPorId($_GET['id']);
 
                 <input type="text" class="nomepreco"   name="Statuss" value="<?php echo $user['Statuss']; ?>">
                           
-                <button id="mudastatuss" class="botaoaedita" name="mudastattus">Excluir usuario</button>	
+                <input type="submit" value="Excluir usuario" class="botaoaexclui" name="exclui">	
 
             </form>	
   
