@@ -59,12 +59,9 @@ $usuarios = $usuariomostra->exibirTodos();
 
             
 
-            $usuariourl = substr($usuariourl1, 2, 19);
+            $usuariourl = substr($usuariourl1, 3, 20);
 
-            
-            
-
-    
+           
             ?>
 
                 <?php foreach ($usuarios as $usuariomostra) : ?>

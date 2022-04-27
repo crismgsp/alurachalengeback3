@@ -1,5 +1,7 @@
 <?php
 
+session_start(); /*tambem coloquei isto dia 27 de abril */
+
 require '../config.php';
 
 if(empty($_POST['Email']) || empty($_POST['Senha'])) {
@@ -30,7 +32,9 @@ $Statuss = $row[2];
 
 
 if (password_verify($_POST['Senha'], $row[0]) && $Statuss == 1)  {
-    header("Location: ../paginasadmin/importacoes.php?Nome='$Nome'");
+    $_SESSION['Nome']= $Nome;    /*acrescentei isto dia 27 abril */
+    header("Location: ../paginasadmin/importacoes.php?Nome='$Nome'"); 
+   
     exit();
 }else {
     echo "Usuario ou senha não existem";
