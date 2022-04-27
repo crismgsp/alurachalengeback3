@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+include('../classesEsimilares/verificalogin.php');
+
 require '../config.php';
 require '../classesEsimilares/Usuarios.php';
 
@@ -12,6 +15,7 @@ $usuarios = $usuariomostra->exibirTodos();
 <html lang="pt">
  
     <head>
+        <p><?php echo $_SESSION['Nome'];?></p>
         <title>Usuarios Cadastrados</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -26,6 +30,7 @@ $usuarios = $usuariomostra->exibirTodos();
 
     <body>
 
+    <h3><a hrf="../classesEsimilares/logout.php"><button>Logout</button></a></h3>
 
     <h1 id="titulo">USUÁRIOS CADASTRADOS</h1>
 

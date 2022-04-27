@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+include('../classesEsimilares/verificalogin.php');
 
 require '../classesEsimilares/Usuarios.php';
 
@@ -28,7 +30,8 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
     <head>
 		<meta charset =”UTF-8
 		<meta name="viewport" content="width=device-width initial-scale=1.0"> 
-		<title>Cadastro de Usuarios</title>
+		
+		<title>Cadastro de Usuarios</title>   <h3><a hrf="../classesEsimilares/logout.php"><button>Logout</button></a></h3>
 		
 		
 		<link rel="stylesheet" href="../assets/css/cadastro.css">
@@ -63,6 +66,8 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 			
 				
 		</header>	
+
+		<p><?php echo $_SESSION['Nome'];?></p>
         
 		
 

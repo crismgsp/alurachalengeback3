@@ -1,5 +1,8 @@
 <?php
 session_start();
+include('../classesEsimilares/verificalogin.php');
+
+
 
 ?>
 
@@ -24,6 +27,8 @@ session_start();
 
         <div id="cabecalho">
             <div id="titulodiv">
+
+                <h2>Seja Bem vindo <?php echo $_SESSION['Nome'];?></h2>
                 <h1 id="titulosuperior">Importar transações</h1> 
                 <a href="../index.html"><button id="logout">Logout</button></a>
                 

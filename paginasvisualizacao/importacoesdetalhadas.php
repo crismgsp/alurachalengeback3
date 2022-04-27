@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+include('../classesEsimilares/verificalogin.php');
+
 include '../classeseSimilares/service.php';
 
 require '../config.php';

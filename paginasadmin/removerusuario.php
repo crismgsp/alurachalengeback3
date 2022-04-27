@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+include('../classesEsimilares/verificalogin.php');
+
 require '../config.php';
 require '../classesEsimilares/Usuarios.php';
 require '../classesEsimilares/redireciona.php';
