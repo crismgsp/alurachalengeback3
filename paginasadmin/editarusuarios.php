@@ -1,3 +1,16 @@
+<?php
+
+require '../config.php';
+require '../classesEsimilares/Usuarios.php';
+require '../classesEsimilares/redireciona.php';
+
+$edita = new Usuarios($mysql);
+$editar = $edita->encontrarPorId($_GET['id']);
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt">
  
@@ -18,16 +31,15 @@
 
             <p id="textoedicao"> Edição do usuário </p>
 
-            <form action="cadastrarusuarios.php" method="post" class ="formadicionar" data-form>
+            <form action="editarusuarios.php" method="post" class ="formadicionar" data-form>
            
 		
-                <input type="text" class="nomepreco"  required placeholder="Nome Completo" name="Nome" > 
+                <input type="text" class="nomepreco"  required placeholder="Nome Completo" name="Nome" value="
+                <?php echo $editar['Nome']; ?>" > 
 
-                <input type="text" class="nomepreco"  required placeholder="Email nome@email.com" name="Email" >
+                <input type="text" class="nomepreco"  required placeholder="Email nome@email.com" name="Email"
+                value= "<?php echo $editar['Email']; ?>" >
 
-                
-
-                <input type="text" class="nomepreco"  required placeholder="Status 1" name="Statuss" >
                 <input type="text" class="nomepreco"  required placeholder="Digite a senha" name="Senha" >
                             
                 <input type="submit" value="Editar usuario" class="botaoaedita" name="edita">	

@@ -35,6 +35,18 @@ class Usuarios
         return $usuario;
     }
 
+    public function editar(string $id, string $Nome, string $Email, string $Senha): void 
+    {
+        $editaUsuario = $this->mysql->prepare('UPDATE usuarios SET Nome = ?, Email = ?, Senha = ? WHERE id = ?');
+        $editaUsuario->bind_param('sss', $Nome, $Email, $Senha);
+        $editaUsuario->execute();
+    }
 
+    public function mudastatus(string $id, string $Statuss): void 
+    {
+        $mudastatusUsuario = $this->mysql->prepare('UPDATE usuarios SET Statuss = ? WHERE id = ?');
+        $mudastatusUsuario->bind_param('ss', $id, $Statuss);
+        $mudastatusUsuario->execute();
+    }
     
 }

@@ -1,3 +1,19 @@
+<?php
+
+require '../config.php';
+require '../classesEsimilares/Usuarios.php';
+require '../classesEsimilares/redireciona.php';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $mudastatusUsuario = new Usuarios($mysql);
+    $remove = $mudastatusUsuario->mudastatus($_POST['id'], $_POST['Statuss']);
+    redireciona('../paginasvisualizacao/usuarioscadastrados.php');
+}
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt">
  
@@ -17,10 +33,13 @@
 
         <p id="textoedicao"> Para "excluir" digite 2 no Status e clique no botão </p>
 
+    
             
-            <form action="cadastrarusuarios.php" method="post" class ="formadicionar" data-form>
+            <form action="removerusuario.php" method="post" class ="formadicionar" data-form>
 
-                <input type="text" class="nomepreco"  required placeholder="Status 1" name="Statuss" >
+                <input type="text" class="nomepreco"  required placeholder=" 1" name="id" value="<?php echo $_GET['id']; ?>">
+
+                <input type="text" class="nomepreco"  required placeholder=" Status" name="Statuss" value="">
                           
                 <input type="submit" id="mudastatuss" value="Excluir usuario" class="botaoaedita" name="mudastattus">	
 
