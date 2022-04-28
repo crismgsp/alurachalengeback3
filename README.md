@@ -19,14 +19,15 @@ Criar senhas de forma automatica e que fiquem armazenadas de forma criptografada
 
 
 <p align="center">**Ferramentas e linguagens utilizadas até agora:**</p>
-*![simbolo PHP](https://www.flaticon.com/br/icones-gratis/php) title=php ícones">Php ícones criados por Freepik - Flaticon) PHP <br>
+*![simbolo PHP criado por Freepik - Flaticon ](assets/imagens/php.png) PHP <br>
 *HTML <br>
 *CSS <br>
 *Banco de dados com o servidor  MariaDB, que estou acessando pelo PHPMyAdmin. <br>
 *Visual Studio Code para criar os arquivos <br>
 
 
-
+Referencias das imagens para credito:
+PHP -> (https://www.flaticon.com/br/icones-gratis/php)
 
 
 
