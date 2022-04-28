@@ -14,6 +14,7 @@ $imprimir = $imprime->imprimir();
 $imprimedata = new Imprime($mysql);
 $imprimirdata = $imprime->imprimirdata(); 
 
+$_SESSION['time']     = time();
 
 ?>
 
@@ -22,7 +23,7 @@ $imprimirdata = $imprime->imprimirdata();
 <html lang="pt">
  
     <head>
-        <p><?php echo $_SESSION['Nome'];?></p>
+        <p><?php echo $_SESSION['Nome'];?></p> <p><?php echo date('d m Y ', $_SESSION['time']);?></p>
         <title>Visualizar importacoes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">

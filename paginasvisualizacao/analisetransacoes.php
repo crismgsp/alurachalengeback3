@@ -29,6 +29,7 @@ la embaixo coloca as condicoes... etc... */
     */
 
     <h1>Transacoes Suspeitas</h1>
+    
     <table class="table" >
         <thead>
             <tr>
