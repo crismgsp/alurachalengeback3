@@ -19,6 +19,7 @@ Criar senhas de forma automatica e que fiquem armazenadas de forma criptografada
 
 
 <p align="center">**Ferramentas e linguagens utilizadas até agora:**</p>
+<img src='/assets/imagens/php.png' alt="simbolo PHP criado por Freepik - Flaticon"/> PHP <br>
 ![simbolo PHP criado por Freepik - Flaticon](/assets/imagens/php.png) PHP <br>
 ![simbolo HTML criado por Freepik - Flaticon](/assets/imagens/html.png)HTML <br>
 ![simbolo CSS criado por Freepik - Flaticon](/assets/imagens/css.png)CSS <br>
