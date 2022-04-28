@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+
 include('../classesEsimilares/verificalogin.php');
 
 require '../classesEsimilares/Usuarios.php';

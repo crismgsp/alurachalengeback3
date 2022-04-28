@@ -6,6 +6,8 @@ include('../classesEsimilares/verificalogin.php');
 require '../config.php';
 require '../classesEsimilares/Usuarios.php';
 
+
+
 $usuariomostra = new Usuarios($mysql);
 $usuarios = $usuariomostra->exibirTodos();
 
@@ -30,7 +32,7 @@ $usuarios = $usuariomostra->exibirTodos();
 
     <body>
 
-    <h3><a hrf="../classesEsimilares/logout.php"><button>Logout</button></a></h3>
+    <h2><a hrf="../classesEsimilares/logout.php"><button>Logout</button></a></h2>
 
     <h1 id="titulo">USUÁRIOS CADASTRADOS</h1>
 

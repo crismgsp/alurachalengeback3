@@ -1,8 +1,5 @@
 <?php
 
-session_start();
-include('../classesEsimilares/verificalogin.php');
-
 require '../config.php';
 require '../classesEsimilares/Usuarios.php';
 require '../classesEsimilares/redireciona.php';
@@ -27,7 +24,7 @@ $user = $usuario->encontrarPorId($_GET['id']);
 <html lang="pt">
  
     <head>
-        <title>Editar usuário</title>
+        <title>Aprendendo a fazer upload csv pro banco de dados</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -41,7 +38,7 @@ $user = $usuario->encontrarPorId($_GET['id']);
 
         <div id="diveditar">
 
-            <p id="textoedicao"> Edição do usuário </p>  <h3><a hrf="../classeseSimilares/logout.php">Logout</a></h3>
+            <p id="textoedicao"> Edição do usuário </p>
 
             <form action="editarusuarios.php?id=<?php echo $user['id']?>"  method="post" class ="formadicionar" data-form>
            

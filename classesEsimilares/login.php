@@ -1,8 +1,10 @@
 <?php
 
+
 session_start(); /*tambem coloquei isto dia 27 de abril */
 
 require '../config.php';
+
 
 if(empty($_POST['Email']) || empty($_POST['Senha'])) {
     header('Location: ../paginasvisualizacao/paginalogin.php');
@@ -38,4 +40,5 @@ if (password_verify($_POST['Senha'], $row[0]) && $Statuss == 1)  {
     exit();
 }else {
     echo "Usuario ou senha não existem";
+    header('Location: ../index.html');
 }
