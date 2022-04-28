@@ -8,3 +8,4 @@ if(!$_SESSION['Nome']) {
     header('Location:../index.html');
     exit();
 }
+

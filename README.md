@@ -1,4 +1,4 @@
-<h1 align="center"><strong><font color="orange">Chalenge Backend 3 da Alura.</font></strong></h1>
+<h1 align="center"><strong>Chalenge Backend 3 da Alura.</strong></h1>
 
 Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples).
  A minha intenção em participar do Chalenge é aprender mais (e colocar o php que já  aprendi até o momento em prática), é ter um contato com a área de backend e ver as dificuldades. Tenho muita curiosidade de fazer um deploy em uma aplicacao de forma que funcione direitinho igual funciona quando testo no computador.
