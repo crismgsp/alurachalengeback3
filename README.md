@@ -19,11 +19,11 @@ Semanas 3 e 4 --> vou escrever depois que começar
 
 
 <p align="center">**Ferramentas e linguagens utilizadas até agora:**</p>
-*![simbolo php](<a href="https://www.flaticon.com/br/icones-gratis/php" title="php ícones">Php ícones criados por Freepik - Flaticon</a>)PHP
-*HTML
-*CSS
-*Banco de dados com o servidor  MariaDB, que estou acessando pelo PHPMyAdmin.
-*Visual Studio Code para criar os arquivos
+*![simbolo PHP] <a href="https://www.flaticon.com/br/icones-gratis/php" title="php ícones">Php ícones criados por Freepik - Flaticon</a>)PHP <br>
+*HTML <br>
+*CSS <br>
+*Banco de dados com o servidor  MariaDB, que estou acessando pelo PHPMyAdmin. <br>
+*Visual Studio Code para criar os arquivos <br>
 
 
 
