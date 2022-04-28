@@ -11,15 +11,15 @@ Fazer upload de arquivos para o banco de dados usando php. Fazer CRUD com PHP. C
 
 <p align="center">**Ainda preciso aprender para este projeto:**</p>
 
-Semana 1: Validação de dados antes de enviar para o banco de dados --> isto está sendo um desafio
+<p>Semana 1:</p> Validação de dados antes de enviar para o banco de dados --> isto está sendo um desafio
 Criar senhas de forma automatica e que fiquem armazenadas de forma criptografada no banco, e a senha deve ser enviada automaticamente para o usuario.
-Semana2: Falta resolver a questão do logout que não está funcionando.
-Semanas 3 e 4 --> vou escrever depois que começar
+<p>Semana2:</p> Falta resolver a questão do logout que não está funcionando.
+<p>Semanas 3 e 4 </p>--> vou escrever depois que começar
 
 
 
 <p align="center">**Ferramentas e linguagens utilizadas até agora:**</p>
-*![simbolo PHP] <a href="https://www.flaticon.com/br/icones-gratis/php" title="php ícones">Php ícones criados por Freepik - Flaticon</a>)PHP <br>
+*![simbolo PHP](https://www.flaticon.com/br/icones-gratis/php) title=php ícones">Php ícones criados por Freepik - Flaticon) PHP <br>
 *HTML <br>
 *CSS <br>
 *Banco de dados com o servidor  MariaDB, que estou acessando pelo PHPMyAdmin. <br>
