@@ -8,14 +8,14 @@ Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum c
 
 <strong>Tela inicial:</strong> onde o usuario acessa a pagina de  login para acessar outras telas<br>
 
-<strong>Tela de login:</strong> Usuario digita login e senha, e os dados sao checados no banco de dados, se tiver tudo ok,e o status do usuario for 1, o login é efetuado, ainda falta desenvolver o logout pois está dando problema <br>
+<strong>Tela de login:</strong> Usuario digita login e senha, e os dados sao checados no banco de dados, se tiver tudo ok,e o status do usuario for 1, o login é efetuado, a parte de logou está pronta, falta inserir em todas telas. <br>
 
 <strong>Tela de importacões:</strong>Ao fazer o login o usuario e direcionado para uma tela onde pode importar transacoes, por enquanto somente no formato csv, (ainda falta fazer a parte de validar os dados antes de importar). Ao importar estas tabelas elas vao para o banco de dados, onde também sao inseridos  horario e a data  de importação e o usuario logado em colunas especificas.<br>
 Nesta mesma tela a pessoa pode acessar outras 2 telas, uma chama importacoesfeitas e outra chamada cadastrar usuarios.<br>
-<strong>Tela de importacões feitas:</strong> Nesta tela da para ver as datas das transacoes e a data de importacao das importacoes que ja foram feitas, e na frente de cada tem um link, que quando o usuario clica, puxa os dados do banco de dados e mostra todas as colunas daquela transacao especifica.<br>
+<strong>Tela de importacões feitas:</strong> Nesta tela da para ver as datas das transacoes e a data de importacao das importacoes que ja foram feitas, e na frente de cada tem um link, que quando o usuario clica, puxa os dados do banco de dados e mostra todas as colunas daquela transacao especifica, elas ficam na tela de transacoes detalhadas<br>
 <strong>Cadastrar usuarios</strong> Nesta tela, tem um formulario, em que é possivel para o usuario logado, cadastrar outro usuario, digitando, nome, email, status e senha. Esta senha fica criptografada no banco de dados. Nesta página tambem tem um botão onde é possível acessar os usuários já cadastrados: tela usuarios cadastrados.<br>
 <strong>Usuarios cadastrados</strong> Nesta tela aparecem todos os usuarios cadastrados, e há na frente de cada nome os botoes editar e excluir que levam para outras telas, no caso do editar é possivel editar nome, email e senha do usuario, e no caso do botao excluir é possivel mudar o status, se mudar de 1 para 2 o login fica inacessivel  para o usuario. O botao de excluir não envia para a tela de excluir caso o usuario seja o mesmo logado, pois ele mesmo não pode se excluir. (ainda preciso melhorar isso)
-
+<br>
 
 <p align="center"><strong>Ainda preciso aprender para este projeto:</strong></p>
 

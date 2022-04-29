@@ -7,7 +7,6 @@ require '../config.php';
 require '../classesEsimilares/Usuarios.php';
 
 
-
 $usuariomostra = new Usuarios($mysql);
 $usuarios = $usuariomostra->exibirTodos();
 
@@ -32,7 +31,7 @@ $usuarios = $usuariomostra->exibirTodos();
 
     <body>
 
-    <h2><a hrf="../classesEsimilares/logout.php"><button>Logout</button></a></h2>
+    <p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
 
     <h1 id="titulo">USUÁRIOS CADASTRADOS</h1>
 

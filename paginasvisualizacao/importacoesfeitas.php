@@ -24,6 +24,7 @@ $_SESSION['time']     = time();
  
     <head>
         <p><?php echo $_SESSION['Nome'];?></p> <p><?php echo date('d m Y ', $_SESSION['time']);?></p>
+        <p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
         <title>Visualizar importacoes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
