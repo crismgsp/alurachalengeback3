@@ -3,7 +3,6 @@ session_start();
 include('../classesEsimilares/verificalogin.php');
 
 
-
 ?>
 
 
@@ -51,7 +50,7 @@ include('../classesEsimilares/verificalogin.php');
             ?>
 
                             
-            <form action="../classesEsimilares/importar2.php?Nome = <?php echo $usuario ?>" method="post" enctype="multipart/form-data">
+            <form action="../classesEsimilares/importar.php?Nome = <?php echo $usuario ?>" method="post" enctype="multipart/form-data">
                 <div class="jumbotron">
                 <h2>Upload do CSV</h2>
                     <div class="custom-file">

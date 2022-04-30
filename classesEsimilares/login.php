@@ -13,7 +13,7 @@ if(empty($_POST['Email']) || empty($_POST['Senha'])) {
 
 
 $query = sprintf(
-    "SELECT Senha, Nome, Statuss FROM usuarios WHERE Email='%s'",
+    "SELECT Senha, Nome, Statuss, id FROM usuarios WHERE Email='%s'",
     mysqli_real_escape_string($mysql, $_POST['Email'])
 );
 
@@ -34,7 +34,8 @@ $Statuss = $row[2];
 
 
 if (password_verify($_POST['Senha'], $row[0]) && $Statuss == 1)  {
-    $_SESSION['Nome']= $Nome;    /*acrescentei isto dia 27 abril */
+    $_SESSION['Nome']= $Nome; 
+    $_SESSION['id']= $ID;   /*acrescentei isto dia 27 abril */
     header("Location: ../paginasadmin/importacoes.php?Nome='$Nome'"); 
    
     exit();

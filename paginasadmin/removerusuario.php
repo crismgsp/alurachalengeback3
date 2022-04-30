@@ -7,12 +7,23 @@ require '../config.php';
 require '../classesEsimilares/Usuarios.php';
 require '../classesEsimilares/redireciona.php';
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+    /*if($_POST('id') === $_SESSION('id')) {
+        echo " Um usuario não pode excluir ele mesmo";
+    }else{
+        $mudastatusUsuario = new Usuarios($mysql);
+        $remove = $mudastatusUsuario->mudastatus($_POST['id'], $_POST['Statuss']);
+        
+        redireciona('../paginasvisualizacao/usuarioscadastrados.php');
+    }  preciso arrumar esta logica aqui.... nao ta reconhecendo o id...session */
     $mudastatusUsuario = new Usuarios($mysql);
     $remove = $mudastatusUsuario->mudastatus($_POST['id'], $_POST['Statuss']);
-    
-    redireciona('../paginasvisualizacao/usuarioscadastrados.php');
+
 }
+
+    
 
 $usuario = new Usuarios($mysql);
 $user = $usuario->encontrarPorId($_GET['id']);
@@ -25,7 +36,7 @@ $user = $usuario->encontrarPorId($_GET['id']);
 <html lang="pt">
  
     <head>
-        <title>Aprendendo a fazer upload csv pro banco de dados</title>
+        <title>Remover usuario</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -37,6 +48,8 @@ $user = $usuario->encontrarPorId($_GET['id']);
     <body>
 
         <div id="divexclusao">
+
+        
 
         <p id="textoedicao"> Para "excluir" digite 2 no Status e clique no botão </p>
 
