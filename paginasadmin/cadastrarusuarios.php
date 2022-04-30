@@ -32,7 +32,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 		<meta charset =”UTF-8
 		<meta name="viewport" content="width=device-width initial-scale=1.0"> 
 		
-		<title>Cadastro de Usuarios</title>   <h3><a hrf="../classesEsimilares/logout.php"><button>Logout</button></a></h3>
+		<<p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
 		
 		
 		<link rel="stylesheet" href="../assets/css/cadastro.css">

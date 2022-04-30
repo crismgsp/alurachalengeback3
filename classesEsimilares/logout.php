@@ -1,16 +1,26 @@
 <?php
 
 function logout() {
-    unset($_SESSION['Nome']);
+
+    session_start();  
+    unset($_SESSION['Name']);        
     session_destroy();
-}
+    
+}      
+
 
 logout();
+
+header('Location:../index.html');
+die();
+
+/*
+
 header('Location:../index.html');
 die();
 
 
-/*if(isset($_SESSION['Nome'])) {
+if(isset($_SESSION['Nome'])) {
     unset($_SESSION['Nome']);
     header('Location:../index.html');
     

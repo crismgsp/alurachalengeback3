@@ -5,7 +5,10 @@ include('../classesEsimilares/verificalogin.php');
 
 include '../classeseSimilares/service.php';
 
+
 require '../config.php';
+
+
 
 
 $imprime = new Imprime($mysql);

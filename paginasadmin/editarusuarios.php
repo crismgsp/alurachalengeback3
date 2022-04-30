@@ -38,6 +38,8 @@ $user = $usuario->encontrarPorId($_GET['id']);
 
         <div id="diveditar">
 
+            <p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
+
             <p id="textoedicao"> Edição do usuário </p>
 
             <form action="editarusuarios.php?id=<?php echo $user['id']?>"  method="post" class ="formadicionar" data-form>
