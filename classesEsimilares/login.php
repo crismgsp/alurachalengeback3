@@ -32,6 +32,9 @@ $Nome = $row[1];
 
 $Statuss = $row[2];
 
+/*var_dump($row[0]); 
+exit(); fiz isso pra descobrir a senha criptografada pra colocar no novo banco... */
+
 
 if (password_verify($_POST['Senha'], $row[0]) && $Statuss == 1)  {
     $_SESSION['Nome']= $Nome; 
