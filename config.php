@@ -3,8 +3,7 @@
 /* tentando conectar com o banco do supabase */
 
 
-
-$mysql = new mysqli('https://oblojtfzvbsqojyqrrnp.supabase.co', 'root', '','backendalurageek');
+$mysql = new mysqli('db.oblojtfzvbsqojyqrrnp.supabase.co', 'postgres', '','postgres');
 $mysql-> set_charset('utf8');
 
 if($mysql == FALSE) {
