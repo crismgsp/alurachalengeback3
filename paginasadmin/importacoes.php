@@ -39,19 +39,21 @@ include('../classesEsimilares/verificalogin.php');
         <div class="container">
 
             <?php
-            $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
+           /* $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
             $explodeurl = explode("=", $url);
 
                             
             $usuariomodificado = $explodeurl[1];
             
-            $usuario = str_replace("%27", " ", $usuariomodificado);
+            $usuario = str_replace("%27", " ", $usuariomodificado); */
+
+            $Nome = $_SESSION['Nome'];
             
 
             ?>
 
                             
-            <form action="../classesEsimilares/importar.php?Nome = <?php echo $usuario ?>" method="post" enctype="multipart/form-data">
+            <form action="../classesEsimilares/importar2.php?Nome = <?php echo $Nome ?>" method="post" enctype="multipart/form-data">
                 <div class="jumbotron">
                 <h2>Upload do CSV</h2>
                     <div class="custom-file">
@@ -65,7 +67,7 @@ include('../classesEsimilares/verificalogin.php');
 
         <?php 
 
-    $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
+    /*$url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
 
 
     $explodeurl = explode("=", $url);
@@ -77,16 +79,16 @@ include('../classesEsimilares/verificalogin.php');
 
     $nome = str_replace("%20", " ", $nomemodificado2);
 
-    
+    */
 
     ?>
 
         <p>Para visualizar as importações já feita clique aqui <a href="../paginasvisualizacao/importacoesfeitas.php?Nome=<?php
-        echo $nome ?>">
+        echo '$Nome' ?>">
                 <button id="botaoacesso">Ver importações</button></a>  </p>
 
         <p>Para cadastrar usuários ou ver os cadastrados clique aqui <a href="cadastrarusuarios.php?Nome=<?php
-        echo $nome?>.php">
+        echo '$Nome' ?>.php">
         <button id="botaoacesso">Ver usuarios ou cadastrar</button></a>  </p>        
 
         

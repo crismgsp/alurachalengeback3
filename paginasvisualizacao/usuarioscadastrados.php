@@ -101,7 +101,7 @@ $usuarios = $usuariomostra->exibirTodos();
 
         
 
-        <a href="../paginasadmin/importacoes.php?Nome = <?php echo $usuario ?>"><button >Voltar</button></a>        
+        <a href="../paginasadmin/importacoes.php?Nome = <?php echo $usuariourl ?>"><button >Voltar</button></a>        
 
     </div>
 
