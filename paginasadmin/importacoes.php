@@ -84,12 +84,16 @@ include('../classesEsimilares/verificalogin.php');
     ?>
 
         <p>Para visualizar as importações já feita clique aqui <a href="../paginasvisualizacao/importacoesfeitas.php?Nome=<?php
-        echo '$Nome' ?>">
+        echo $Nome ?>">
                 <button id="botaoacesso">Ver importações</button></a>  </p>
 
         <p>Para cadastrar usuários ou ver os cadastrados clique aqui <a href="cadastrarusuarios.php?Nome=<?php
-        echo '$Nome' ?>.php">
-        <button id="botaoacesso">Ver usuarios ou cadastrar</button></a>  </p>        
+        echo $Nome ?>.php">
+        <button id="botaoacesso">Ver usuarios ou cadastrar</button></a>  </p> 
+        
+        <p>Para ver as transações suspeitas clique aqui <a href="../paginasvisualizacao/analisetransacoes.php?Nome=<?php
+        echo $Nome ?>.php">
+        <button id="botaoacesso">Ver transações suspeitas</button></a>  </p> 
 
         
 

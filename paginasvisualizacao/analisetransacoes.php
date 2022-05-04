@@ -28,12 +28,15 @@ $contassuspeitas = $contas->Contasuspeita();
 
     <body>
 
+    <div>
+    <p1>Escolha o mês de analise (digite o número do mês (1 a 12) </p1>    
+    <form name="selecao" action="analisetransacoes.php" method="POST">
+        <input name="selecao"></input>    
+    </form>
 
-    /* aqui vai colocar o formulario pra inserir o mes de analise e a partir dele irei gerar uma variavel
-    isolando mes e ano e comparar com o do banco de dados... pensar como vai ser inserida esta informacao
-    */
+    </div>
 
-    <h1>Transacoes Suspeitas</h1>
+    <h3>Transacoes Suspeitas</h3>
     
     <table class="table" >
         <thead>
@@ -47,12 +50,13 @@ $contassuspeitas = $contas->Contasuspeita();
                 <th scope="col">Valor</th>  
                 <th scope="col">Data e Hora da transação</th>
                 <th scope="col">Data e Hora da Importação</th>
-                
+                <th scope="col">Mes</th>
 
 
             </tr>
         </thead>
         <tbody>
+            
             <?php foreach ($contassuspeitas as $contas) : ?>
                 <tr>
                     <td><?php echo $contas['BancoOrigem']; ?></td>
@@ -64,6 +68,7 @@ $contassuspeitas = $contas->Contasuspeita();
                     <td><?php echo $contas['Valor']; ?></td>
                     <td><?php echo $contas['DataeHora']; ?></td>
                     <td><?php echo $contas['DataHoraImportacao']; ?></td>
+                    <td><?php echo $contas['Mes']; ?></td>
                     
 
                 </tr>
@@ -71,7 +76,7 @@ $contassuspeitas = $contas->Contasuspeita();
         </tbody>
     </table>
 
-    <h1>Contas Suspeitas</h1>
+    <h3>Contas Suspeitas</h3>
     <table class="table" >
         <thead>
             <tr>
@@ -84,7 +89,7 @@ $contassuspeitas = $contas->Contasuspeita();
                 <th scope="col">Valor</th> aqui vai ter que dar um jeito de colocar toda a soma do valor mensal desta conta
                 <th scope="col">Data e Hora da transação</th>
                 <th scope="col">Data e Hora da Importação</th>
-                
+                <th scope="col">Mes</th>
 
 
             </tr>
@@ -108,7 +113,7 @@ $contassuspeitas = $contas->Contasuspeita();
         </tbody>
     </table>
 
-    <h1>Agencias Suspeitas</h1>
+    <h3>Agencias Suspeitas</h3>
     <table class="table" >
         <thead>
             <tr>
@@ -121,7 +126,7 @@ $contassuspeitas = $contas->Contasuspeita();
                 <th scope="col">Valor</th> aqui vai colocar soma mensal de transacoes por agencia
                 <th scope="col">Data e Hora da transação</th>
                 <th scope="col">Data e Hora da Importação</th>
-                
+                <th scope="col">Mes</th>
 
 
             </tr>

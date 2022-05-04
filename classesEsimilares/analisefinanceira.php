@@ -2,6 +2,8 @@
 
 session_start();
 
+require '../config.php';
+
 class Analise
 {
     private $mysql;
@@ -13,7 +15,11 @@ class Analise
 
     public function Contasuspeita(): array
     { 
-        $resultado = $this->mysql->query("SELECT * FROM transacoes");     
+
+        
+        $mesescolhido = $_POST['selecao'];
+
+        $resultado = $this->mysql->query("SELECT * FROM transacoes WHERE Mes = '$mesescolhido'");     
              
         $dadosconta = $resultado->fetch_all(MYSQLI_ASSOC);
 

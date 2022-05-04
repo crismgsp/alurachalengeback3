@@ -25,6 +25,7 @@ Validação de dados: falta fazer a parte de checar dentro do arquivo a ser impo
 <p><strong>Semana2:</strong></p> 
 Semana 2 praticamente concluída, falta arrumar a parte de visualização dos dados que estou ajeitando aos poucos, e deixar a pagina responsiva. <br>
 <p><strong>Semanas 3 e 4:</strong> </p> 
+Estou fazendo a parte das analises dos dados...já consegui fazer a de transacoes suspeitas, na parte de cima da página tentei colocar um <fieldset> pra pessoa selecionar do 1 ao 12 (meses) de uma forma melhor mas ainda não descobri como pegar este dado do fieldset (como faço com o $_POST) para usar na hora de aparecer os dados das contas, transacoes e agencias suspeitas, então coloquei um formulário por enquanto pra pessoa digitar o mes selecionado.
  <br>
 
 
