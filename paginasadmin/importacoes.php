@@ -53,7 +53,7 @@ include('../classesEsimilares/verificalogin.php');
             ?>
 
                             
-            <form action="../classesEsimilares/importar2.php?Nome = <?php echo $Nome ?>" method="post" enctype="multipart/form-data">
+            <form action="../classesEsimilares/importar4.php?Nome = <?php echo $Nome ?>" method="post" enctype="multipart/form-data">
                 <div class="jumbotron">
                 <h2>Upload do CSV</h2>
                     <div class="custom-file">
