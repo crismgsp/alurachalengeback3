@@ -125,16 +125,20 @@
 
                 $usuario = str_replace("%20", " ", $usuariomodificado2);
 
+                $mes = substr($DataeHora, 6, 2);
+
                         
                 $result = $mysql->query("INSERT INTO transacoes (BancoOrigem, AgenciaOrigem, ContaOrigem, BancoDestino, AgenciaDestino, ContaDestino, Valor, DataeHora,
-                Usuario ) VALUES ('$BancoOrigem', '$AgenciaOrigem', '$ContaOrigem', '$BancoDestino', '$AgenciaDestino', '$ContaDestino',
-                '$Valor', '$DataeHora', '$usuario')");
+                Usuario, Mes ) VALUES ('$BancoOrigem', '$AgenciaOrigem', '$ContaOrigem', '$BancoDestino', '$AgenciaDestino', '$ContaDestino',
+                '$Valor', '$DataeHora', '$usuario', '$mes')");
             }
 
 
             
             if ($result){
             echo "Dados inseridos com sucesso !!!";
+            header('Location:../paginasadmin/importacoes.php');
+            exit();
                 
             }else {
                     echo "Ocorreu um erro ao inserir os dados";

@@ -1,7 +1,12 @@
 <?php
 
-/*aqui vai puxar o analisefinanceira.php e gerar os objetos de acordo com conta, agencia e transacoes suspeitas
-la embaixo coloca as condicoes... etc... */
+require '../config.php';
+require '../classesEsimilares/analisefinanceira.php';
+
+
+$contas = new Analise($mysql);
+$contassuspeitas = $contas->Contasuspeita();
+
 
 ?>
 
@@ -48,17 +53,17 @@ la embaixo coloca as condicoes... etc... */
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($imprime as $imprimirdados) : ?>
+            <?php foreach ($contassuspeitas as $contas) : ?>
                 <tr>
-                    <td><?php echo $imprimirdados['BancoOrigem']; ?></td>
-                    <td><?php echo $imprimirdados['AgenciaOrigem']; ?></td>
-                    <td><?php echo $imprimirdados['ContaOrigem']; ?></td>
-                    <td><?php echo $imprimirdados['BancoDestino']; ?></td>
-                    <td><?php echo $imprimirdados['AgenciaDestino']; ?></td>
-                    <td><?php echo $imprimirdados['ContaDestino']; ?></td>
-                    <td><?php echo $imprimirdados['Valor']; ?></td>
-                    <td><?php echo $imprimirdados['DataeHora']; ?></td>
-                    <td><?php echo $imprimirdados['DataHoraImportacao']; ?></td>
+                    <td><?php echo $contas['BancoOrigem']; ?></td>
+                    <td><?php echo $contas['AgenciaOrigem']; ?></td>
+                    <td><?php echo $contas['ContaOrigem']; ?></td>
+                    <td><?php echo $contas['BancoDestino']; ?></td>
+                    <td><?php echo $contas['AgenciaDestino']; ?></td>
+                    <td><?php echo $contas['ContaDestino']; ?></td>
+                    <td><?php echo $contas['Valor']; ?></td>
+                    <td><?php echo $contas['DataeHora']; ?></td>
+                    <td><?php echo $contas['DataHoraImportacao']; ?></td>
                     
 
                 </tr>

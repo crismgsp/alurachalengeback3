@@ -10,7 +10,8 @@ Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum c
 
 <strong>Tela de login:</strong> Usuario digita login e senha, e os dados sao checados no banco de dados, se tiver tudo ok,e o status do usuario for 1, o login é efetuado, a parte de logou está pronta, falta inserir em todas telas. <br>
 
-<strong>Tela de importacões:</strong>Ao fazer o login o usuario e direcionado para uma tela onde pode importar transacoes, por enquanto somente no formato csv, (ainda falta fazer a parte de validar os dados antes de importar). Ao importar estas tabelas elas vao para o banco de dados, onde também sao inseridos  horario e a data  de importação e o usuario logado em colunas especificas.<br>
+<strong>Tela de importacões:</strong>Ao fazer o login o usuario e direcionado para uma tela onde pode importar transacoes, por enquanto somente no formato csv, tem as seguintes validações antes de importar o arquivo no moemnto: faz uma checagem se o arquivo
+está no formato csv e se ainda não existe a data da primeira linha do arquivo do upload no banco de dados . Ao importar estas tabelas elas vao para o banco de dados, onde também sao inseridos (além dos dados do arquivo importado) o horario e a data  de importação e o usuario logado em colunas especificas.<br>
 Nesta mesma tela a pessoa pode acessar outras 2 telas, uma chama importacoesfeitas e outra chamada cadastrar usuarios.<br>
 <strong>Tela de importacões feitas:</strong> Nesta tela da para ver as datas das transacoes e a data de importacao das importacoes que ja foram feitas, e na frente de cada tem um link, que quando o usuario clica, puxa os dados do banco de dados e mostra todas as colunas daquela transacao especifica, elas ficam na tela de transacoes detalhadas<br>
 <strong>Cadastrar usuarios</strong> Nesta tela, tem um formulario, em que é possivel para o usuario logado, cadastrar outro usuario, digitando, nome, email, status e senha. Esta senha fica criptografada no banco de dados. Nesta página tambem tem um botão onde é possível acessar os usuários já cadastrados: tela usuarios cadastrados.<br>
@@ -20,12 +21,11 @@ Nesta mesma tela a pessoa pode acessar outras 2 telas, uma chama importacoesfeit
 <p align="center"><strong>Ainda preciso aprender para este projeto:</strong></p>
 
 <p><strong>Semana 1:</strong></p> 
-Validação de dados antes de enviar para o banco de dados --> isto está sendo um desafio
-Criar senhas de forma automatica e que fiquem armazenadas de forma criptografada no banco, e a senha deve ser enviada automaticamente para o usuario. <br>
+Validação de dados: falta fazer a parte de checar dentro do arquivo a ser importado se existe data diferente da primeira linha, se existir esta linha não é pra ser importada.
 <p><strong>Semana2:</strong></p> 
-Falta resolver a questão do logout que não está funcionando. <br>
+Semana 2 praticamente concluída, falta arrumar a parte de visualização dos dados que estou ajeitando aos poucos, e deixar a pagina responsiva. <br>
 <p><strong>Semanas 3 e 4:</strong> </p> 
-vou escrever depois que começar <br>
+ <br>
 
 
 

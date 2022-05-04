@@ -1,24 +1,38 @@
 <?php
 
+session_start();
+
 class Analise
 {
     private $mysql;
+    
     public function __construct(mysqli $mysql)
     {
         $this->mysql = $mysql;
     }
 
-    public function Conta (): array
-    {
-        $resultado = $this->mysql->query("SELECT * FROM `transacoes` WHERE `DataeHora` =?");   
+    public function Contasuspeita(): array
+    { 
+        $resultado = $this->mysql->query("SELECT * FROM transacoes");     
              
         $dadosconta = $resultado->fetch_all(MYSQLI_ASSOC);
-        
-        /*aqui vou colocar um jeito de somar os valores pra todas contas e caso a soma seja maior que 1.000.000 vai ser retornada em uma 
-        variavel.... em vez de retornar dadosconta..vai retornar a nova variavel so com somas maiores que este valor */
 
-        return $dadosconta;
+        /* checar os valores de todas transacoes se for > que 100.000 armazena no $dadoscontas 
+        depois tentar separar por mes para a pessoa poder filtrar*/
+
+        $contasuspeita = array();
+
+        foreach($dadosconta as $dados) {
+            $valor = $dados['Valor'];
+            if ($valor > 100000) {
+                array_push($contasuspeita, $dados);
+            }
+        }
+
+        return $contasuspeita;
     }
+   
+}
 
-    
+
 
