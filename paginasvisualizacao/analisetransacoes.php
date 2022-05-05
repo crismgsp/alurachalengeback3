@@ -5,7 +5,13 @@ require '../classesEsimilares/analisefinanceira.php';
 
 
 $contas = new Analise($mysql);
-$contassuspeitas = $contas->Contasuspeita();
+$contassuspeitas = $contas->transacaoSuspeita();
+
+$contassusp = new Analise($mysql);
+$contassuspeitasmes = $contassusp->contaSuspeita();
+
+$agenciassusp = new Analise($mysql);
+$agenciasuspeitasmes = $agenciassusp->agenciaSuspeita();
 
 
 ?>
@@ -80,34 +86,23 @@ $contassuspeitas = $contas->Contasuspeita();
     <table class="table" >
         <thead>
             <tr>
-                <th scope="col">Banco de Origem</th>
-                <th scope="col">Agencia de Origem</th>
-                <th scope="col">Conta de Origem</th>
-                <th scope="col">Banco de Destino</th>
-                <th scope="col">Agencia de Destino</th>
-                <th scope="col">Conta de Destino</th>
-                <th scope="col">Valor</th> aqui vai ter que dar um jeito de colocar toda a soma do valor mensal desta conta
-                <th scope="col">Data e Hora da transação</th>
-                <th scope="col">Data e Hora da Importação</th>
-                <th scope="col">Mes</th>
+                <th scope="col">Banco</th>
+                <th scope="col">Agencia</th>
+                <th scope="col">Conta</th>
+                <th scope="col">Valor</th> 
+                
 
 
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($imprime as $imprimirdados) : ?>
+            <?php foreach ($contassuspeitasmes as $contames) : ?>
                 <tr>
-                    <td><?php echo $imprimirdados['BancoOrigem']; ?></td>
-                    <td><?php echo $imprimirdados['AgenciaOrigem']; ?></td>
-                    <td><?php echo $imprimirdados['ContaOrigem']; ?></td>
-                    <td><?php echo $imprimirdados['BancoDestino']; ?></td>
-                    <td><?php echo $imprimirdados['AgenciaDestino']; ?></td>
-                    <td><?php echo $imprimirdados['ContaDestino']; ?></td>
-                    <td><?php echo $imprimirdados['Valor']; ?></td>
-                    <td><?php echo $imprimirdados['DataeHora']; ?></td>
-                    <td><?php echo $imprimirdados['DataHoraImportacao']; ?></td>
+                    <td><?php echo $contames['BancoDestino']; ?></td>
+                    <td><?php echo $contames['AgenciaDestino']; ?></td>
+                    <td><?php echo $contames['ContaDestino']; ?></td>
+                    <td><?php echo $contames['Soma']; ?></td>
                     
-
                 </tr>
             <?php endforeach; ?> 
         </tbody>
@@ -117,32 +112,20 @@ $contassuspeitas = $contas->Contasuspeita();
     <table class="table" >
         <thead>
             <tr>
-                <th scope="col">Banco de Origem</th>
-                <th scope="col">Agencia de Origem</th>
-                <th scope="col">Conta de Origem</th>
-                <th scope="col">Banco de Destino</th>
-                <th scope="col">Agencia de Destino</th>
-                <th scope="col">Conta de Destino</th>
-                <th scope="col">Valor</th> aqui vai colocar soma mensal de transacoes por agencia
-                <th scope="col">Data e Hora da transação</th>
-                <th scope="col">Data e Hora da Importação</th>
-                <th scope="col">Mes</th>
+                <th scope="col">Banco</th>
+                <th scope="col">Agencia</th>
+                <th scope="col">Valor</th> 
 
 
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($imprime as $imprimirdados) : ?>
+            <?php foreach ($agenciasuspeitasmes as $agencia) : ?>
                 <tr>
-                    <td><?php echo $imprimirdados['BancoOrigem']; ?></td>
-                    <td><?php echo $imprimirdados['AgenciaOrigem']; ?></td>
-                    <td><?php echo $imprimirdados['ContaOrigem']; ?></td>
-                    <td><?php echo $imprimirdados['BancoDestino']; ?></td>
-                    <td><?php echo $imprimirdados['AgenciaDestino']; ?></td>
-                    <td><?php echo $imprimirdados['ContaDestino']; ?></td>
-                    <td><?php echo $imprimirdados['Valor']; ?></td>
-                    <td><?php echo $imprimirdados['DataeHora']; ?></td>
-                    <td><?php echo $imprimirdados['DataHoraImportacao']; ?></td>
+                    <td><?php echo $agencia['BancoDestino']; ?></td>
+                    <td><?php echo $agencia['AgenciaDestino']; ?></td>
+                    <td><?php echo $agencia['Valor']; ?></td>
+                    
                     
 
                 </tr>

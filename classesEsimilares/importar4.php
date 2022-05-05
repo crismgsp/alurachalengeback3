@@ -106,9 +106,9 @@
 
                 
                 if ($result){
-                echo "Dados inseridos com sucesso !!!";
-                header('Location:../paginasadmin/importacoes.php');
-                exit();
+                    echo "Dados inseridos com sucesso !!!";
+                    header('Location:../paginasadmin/importacoes.php');
+                    exit();
                     
                 }else {
                     echo "Ocorreu um erro ao inserir os dados";
@@ -121,14 +121,5 @@
 ?>
 
        
-          
-   
-   
-
-    
-    
-   
-   
-    }else{
 
         

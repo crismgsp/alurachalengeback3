@@ -7,7 +7,7 @@ require '../config.php';
 
 
 if(empty($_POST['Email']) || empty($_POST['Senha'])) {
-    header('Location: ../paginasvisualizacao/paginalogin.php');
+    header('Location: ../paginasvisualizacao/paginalogin.html');
     exit();
 }
 
