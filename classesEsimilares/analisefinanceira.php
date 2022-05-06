@@ -41,42 +41,38 @@ class Analise
     public function contaSuspeita(): array
     { 
 
+        $mesescolhido = $_POST['selecao'];    
         
-        $mesescolhido = $_POST['selecao'];
-
-        $resultado = $this->mysql->query("SELECT BancoOrigem, AgenciaOrigem, ContaOrigem, Sum(Valor) as Soma FROM transacoes WHERE Mes = '$mesescolhido' 
-        GROUP BY ContaOrigem, BancoOrigem, AgenciaOrigem");     
-             
+        $resultado = $this->mysql->query("SELECT BancoOrigem as Banco, AgenciaOrigem as Agencia, ContaOrigem as Conta, Sum(Valor) as Soma FROM transacoes WHERE Mes = '$mesescolhido' 
+        GROUP BY ContaOrigem, BancoOrigem, AgenciaOrigem"); 
+                  
         $dadosconta = $resultado->fetch_all(MYSQLI_ASSOC);
 
-        $resultado2 = $this->mysql->query("SELECT BancoDestino, AgenciaDestino, ContaDestino, Sum(Valor) as Soma FROM transacoes WHERE Mes = '$mesescolhido' 
+        
+        $resultado2 = $this->mysql->query("SELECT BancoDestino as Banco, AgenciaDestino as Agencia, ContaDestino as Conta, Sum(Valor) as Soma FROM transacoes WHERE Mes = '$mesescolhido' 
         GROUP BY ContaDestino, BancoDestino, AgenciaDestino");
 
-        $dadosconta2 = $resultado2->fetch_all(MYSQLI_ASSOC);
+        
+        
+        $dadosconta2 = $resultado2->fetch_all(MYSQLI_ASSOC); 
 
+        
 
-        /* checar os valores de todas contas tentar agrupar por conta de alguma forma observando os dados de agencia, banco e numero conta e 
-        fazer uma soma dos valores mensais*/
+        $dadostotais = array_merge($dadosconta, $dadosconta2);  
 
+     
         $contasuspeita = array();
 
-        foreach($dadosconta as $dados) {
+
+        
+        foreach($dadostotais as $dados) {
             $soma = $dados['Soma'];
 
             if($soma > 1000000) {
                 array_push($contasuspeita, $dados);
             }
-        }    
-
-        foreach($dadosconta2 as $dados2) {
-            $soma2 = $dados2['Soma'];
-    
-            if($soma2 > 1000000) {
-                array_push($contasuspeita, $dados2);
-            }    
-
-            
         }
+        
 
         return $contasuspeita;
     }

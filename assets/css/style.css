@@ -1,6 +1,15 @@
 
 /* por algum motivo tenho impressao que quando coloco neste nao está respondendo passei uns pro diversos.css */
 
+.logout {
+    position: absolute;
+    border-right: 15vw;
+    background-color: blue;
+}
+
+
+
+
 body {
     background-color: rgba(207, 209, 209, 0.161);
 }
@@ -63,6 +72,8 @@ body {
     padding: 0;
 
 }
+
+
 
 
 

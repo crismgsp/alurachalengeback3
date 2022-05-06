@@ -32,7 +32,7 @@ $usuarios = $usuariomostra->exibirTodos();
 
     <body>
 
-    <p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
+    <p1><a href="../classesEsimilares/logout.php"><button class="logout">Logout</button></a></p1>
 
     <h1 id="titulo">USUÁRIOS CADASTRADOS</h1>
 

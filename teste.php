@@ -12,7 +12,7 @@
         
 
     
-        $mesescolhido = 5;
+        $mesescolhido = 6;
 
         $query= ("SELECT BancoOrigem, AgenciaOrigem, ContaOrigem, Sum(Valor) as Soma FROM transacoes WHERE Mes = '$mesescolhido' 
         GROUP BY ContaOrigem, BancoOrigem, AgenciaOrigem"); 
@@ -51,6 +51,13 @@
         }
 
         
+        foreach($contasuspeita as $testejuncao) {
+            if(($testejuncao['BancoOrigem'] && ($testejuncao['AgenciaOrigem'] && ($testejuncao['ContaOrigem']) === ($testejuncao['BancoDestino'] && ($testejuncao['AgenciaDestino'] && ($testejuncao['ContaDestino'])) {
+                $
+            }
+        }
+        
+
 
         var_dump($contasuspeita);
         exit();
@@ -58,3 +65,11 @@
 
 array(1) { [0]=> array(4) { ["BancoDestino"]=> string(14) "BANCO BRADESCO" 
     ["AgenciaDestino"]=> string(1) "1" ["ContaDestino"]=> string(1) "1" ["Soma"]=> string(7) "1300000" } }
+
+    quando coloco mes 6 a resposta do teste 2 vem  desta forma
+
+    array(4) { [0]=> array(4) { ["BancoOrigem"]=> string(8) "BRADESCO" ["AgenciaOrigem"]=> string(1) "1" ["ContaOrigem"]=> string(1) "1" ["Soma"]=> string(9) "300000000" }
+     [1]=> array(4) { ["BancoOrigem"]=> string(22) "TESTE AGENCIA SUSPEITA" ["AgenciaOrigem"]=> string(1) "1" ["ContaOrigem"]=> string(1) "1" ["Soma"]=> 
+        string(9) "750000000" } [2]=> array(4) { ["BancoDestino"]=> string(14) "BANCO BRADESCO" ["AgenciaDestino"]=> string(1) "1" ["ContaDestino"]=> string(1) "1" 
+            ["Soma"]=> string(9) "750800000" } [3]=> array(4) { ["BancoDestino"]=> string(22) "TESTE AGENCIA SUSPEITA" ["AgenciaDestino"]=> string(1) "1" ["ContaDestino"]=>
+                 string(1) "1" ["Soma"]=> string(9) "300000000" } }

@@ -98,9 +98,9 @@ $agenciasuspeitasmes = $agenciassusp->agenciaSuspeita();
         <tbody>
             <?php foreach ($contassuspeitasmes as $contames) : ?>
                 <tr>
-                    <td><?php echo $contames['BancoDestino']; ?></td>
-                    <td><?php echo $contames['AgenciaDestino']; ?></td>
-                    <td><?php echo $contames['ContaDestino']; ?></td>
+                    <td><?php echo $contames['Banco']; ?></td>
+                    <td><?php echo $contames['Agencia'];  ?></td>
+                    <td><?php echo $contames['Conta']; ?></td>
                     <td><?php echo $contames['Soma']; ?></td>
                     
                 </tr>
