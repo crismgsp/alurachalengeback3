@@ -58,40 +58,32 @@ class Analise
 
         
 
-        /* $dadostotais = array_merge($dadosconta, $dadosconta2);  
+         $dadostotais = array_merge($dadosconta, $dadosconta2);  
 
      
-        $contasuspeita = array(); */
+         $contasuspeita1 = array();
 
-        $contasuspeita1 = $dadosconta;
-
+         foreach($dadostotais as $dados) {
+             $chave = $dados['Banco'].$dados['Agencia'].$dados['Conta'];
+             if (!array_key_exists($chave, $contasuspeita1)) {
+                 $contasuspeita1[$chave] = array( 
+                     'Banco' => $dados['Banco'],
+                     'Agencia' => $dados['Agencia'],
+                     'Conta' => $dados['Conta'],
+                     'Soma' => $dados['Soma'],
+                     
+                 );
+             }else{
+                 $contasuspeita1[$chave] = array (
+                     'Banco' => $dados['Banco'],
+                     'Agencia' => $dados['Agencia'],
+                     'Conta' => $dados['Conta'],
+                     'Soma' => $contasuspeita1[$chave]['Soma'] + $dados['Soma'],
+                 );
+             }
+         }
         
-        $contasuspeita2 = $dadosconta2;
-
-        foreach($contasuspeita2 as $dados1) {
-            $posicao = $contasuspeita2['Banco']['Agencia']['Conta'];
-            if ($posicao === false) {    /*se nao existe adiciona */
-                array_push($contasuspeita1, $dados1);
-            }else {  /* se existe aumenta apenas a quantidade */
-                
-                $contasuspeita1[$posicao]['Soma'] += $dados1['Soma'];
-            }
-
-        } 
-        
-        
-        /*
-        foreach($contasuspeita2 as $dados1) {
-            $posicao = $contasuspeita2['Banco']['Agencia']['Conta'];
-            if (in_array($posicao, $contasuspeita1)) {    se nao existe adiciona 
-                $contasuspeita1[$posicao]['Soma'] += $dados1['Soma'];
-            }else {   se nao existe aumenta apenas a quantidade 
-                array_push($contasuspeita1, $dados1);
-            }
-
-        } */
-
-
+      
 
       
         $contasuspeita = array();
@@ -127,22 +119,32 @@ class Analise
         /* checar os valores de todas contas tentar agrupar por conta de alguma forma observando os dados de agencia, banco e numero conta e 
         fazer uma soma dos valores mensais*/
 
-        $agenciasuspeita1 = $dadosconta;
+        $dadostotais = array_merge($dadosconta, $dadosconta2);  
 
+     
+         $agenciasuspeita1 = array();
 
-        $agenciasuspeita2 = $dadosconta2;
-
-        foreach($agenciasuspeita2 as $dados1) {
-            $posicao = $agenciasuspeita2['Banco']['Agencia'];
-            if ($posicao === false) {    /*se nao existe adiciona */
-                array_push($agenciasuspeita1, $dados1);
-            }else {  /* se existe aumenta apenas a quantidade */
-                $agenciasuspeita1[$posicao]['Soma'] += $dados1['Soma'];    
-
-            }
-
-        } 
-
+         foreach($dadostotais as $dados) {
+             $chave = $dados['Banco'].$dados['Agencia'].$dados['Conta'];
+             if (!array_key_exists($chave, $agenciasuspeita1)) {
+                 $agenciasuspeita1[$chave] = array( 
+                     'Banco' => $dados['Banco'],
+                     'Agencia' => $dados['Agencia'],
+                     'Conta' => $dados['Conta'],
+                     'Soma' => $dados['Soma'],
+                     
+                 );
+             }else{
+                 $agenciasuspeita1[$chave] = array (
+                     'Banco' => $dados['Banco'],
+                     'Agencia' => $dados['Agencia'],
+                     'Conta' => $dados['Conta'],
+                     'Soma' => $agenciasuspeita1[$chave]['Soma'] + $dados['Soma'],
+                 );
+             }
+         }
+        
+      
 
         $agenciasuspeitatotal = array();
 
