@@ -8,14 +8,15 @@ Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum c
 
 <strong>Tela inicial:</strong> onde o usuario acessa a pagina de  login para acessar outras telas<br>
 
-<strong>Tela de login:</strong> Usuario digita login e senha, e os dados sao checados no banco de dados, se tiver tudo ok,e o status do usuario for 1, o login é efetuado, a parte de logou está pronta, falta inserir em todas telas. <br>
+<strong>Tela de login:</strong> Usuario digita login e senha, e os dados sao checados no banco de dados, se tiver tudo ok,e o status do usuario for 1, o login é efetuado, a parte de logou está pronta. <br>
 
 <strong>Tela de importacões:</strong>Ao fazer o login o usuario e direcionado para uma tela onde pode importar transacoes, por enquanto somente no formato csv, tem as seguintes validações antes de importar o arquivo no moemnto: faz uma checagem se o arquivo
 está no formato csv e se ainda não existe a data da primeira linha do arquivo do upload no banco de dados . Ao importar estas tabelas elas vao para o banco de dados, onde também sao inseridos (além dos dados do arquivo importado) o horario e a data  de importação e o usuario logado em colunas especificas.<br>
 Nesta mesma tela a pessoa pode acessar outras 2 telas, uma chama importacoesfeitas e outra chamada cadastrar usuarios.<br>
 <strong>Tela de importacões feitas:</strong> Nesta tela da para ver as datas das transacoes e a data de importacao das importacoes que ja foram feitas, e na frente de cada tem um link, que quando o usuario clica, puxa os dados do banco de dados e mostra todas as colunas daquela transacao especifica, elas ficam na tela de transacoes detalhadas<br>
+<strong>Tela de transações suspeitas:</strong> Nesta tela aparecem as transacoes suspeitas, na tela de cima a pessoa escolhe um mes (preciso melhorar o jeito da pessoa selecionar o mes) caso seja feita uma transação com valor maior do que 100.000 aparece na tela do mes da transacao, caso uma conta bancaria tenha feito no mes todo transacoes (tanto de entrada como de saida) no valor total maior que 1000000 aparece na tabela abaixo, e caso a soma total de transacoes de uma agencia seja maior que 1 bilhao no mes aparece na terceira tabela desta pagina.
 <strong>Cadastrar usuarios</strong> Nesta tela, tem um formulario, em que é possivel para o usuario logado, cadastrar outro usuario, digitando, nome, email, status e senha. Esta senha fica criptografada no banco de dados. Nesta página tambem tem um botão onde é possível acessar os usuários já cadastrados: tela usuarios cadastrados.<br>
-<strong>Usuarios cadastrados</strong> Nesta tela aparecem todos os usuarios cadastrados, e há na frente de cada nome os botoes editar e excluir que levam para outras telas, no caso do editar é possivel editar nome, email e senha do usuario, e no caso do botao excluir é possivel mudar o status, se mudar de 1 para 2 o login fica inacessivel  para o usuario. O botao de excluir não envia para a tela de excluir caso o usuario seja o mesmo logado, pois ele mesmo não pode se excluir. (ainda preciso melhorar isso)
+<strong>Usuarios cadastrados</strong> Nesta tela aparecem todos os usuarios cadastrados, e há na frente de cada nome os botoes editar e excluir que levam para outras telas, no caso do editar é possivel editar nome, email e senha do usuario, e no caso do botao excluir é possivel mudar o status, se mudar de 1 para 2 o login fica inacessivel  para o usuario, pois foi pedido para nao excluir totalmente para nao gerar problemas caso o usuario tenha postado tabelas, o nome dele ser puxado do banco de dados normalmente, mesmo apos o acesso ficar inacessivel. O usuário não pode se excluir e nenhum usuário pode excluir o admin.
 <br>
 
 <p align="center"><strong>Ainda preciso aprender para este projeto:</strong></p>
@@ -23,9 +24,9 @@ Nesta mesma tela a pessoa pode acessar outras 2 telas, uma chama importacoesfeit
 <p><strong>Semana 1:</strong></p> 
 Validação de dados: falta fazer a parte de checar dentro do arquivo a ser importado se existe data diferente da primeira linha, se existir esta linha não é pra ser importada.
 <p><strong>Semana2:</strong></p> 
-Semana 2 praticamente concluída, falta arrumar a parte de visualização dos dados que estou ajeitando aos poucos, e deixar a pagina responsiva. <br>
+Semana 2 Concluida <br>
 <p><strong>Semanas 3 e 4:</strong> </p> 
-Estou fazendo a parte das analises dos dados...já consegui fazer a de transacoes suspeitas, na parte de cima da página tentei colocar um <fieldset> pra pessoa selecionar do 1 ao 12 (meses) de uma forma melhor mas ainda não descobri como pegar este dado do fieldset (como faço com o $_POST) para usar na hora de aparecer os dados das contas, transacoes e agencias suspeitas, então coloquei um formulário por enquanto pra pessoa digitar o mes selecionado.
+Concluida, falta só melhorar a visualização, tem uma tabela na parte de importações feitas, que preciso melhorar.
  <br>
 
 
