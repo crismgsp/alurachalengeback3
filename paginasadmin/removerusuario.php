@@ -9,24 +9,40 @@ require '../classesEsimilares/redireciona.php';
 
 
 
+
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-    /*if($_POST('id') === $_SESSION('id')) {
+    if(empty($_POST)) {
+        echo "Voce precisa digitar o 2 para excluir";
+    }
+    
+    elseif($_POST['nome'] === $_SESSION['Nome']) {
         echo " Um usuario não pode excluir ele mesmo";
-    }else{
+    }elseif($_POST['nome'] === 'Admin') {
+        echo "O usuario Admin nao pode ser excluido";
+    }
+    
+    else{
         $mudastatusUsuario = new Usuarios($mysql);
         $remove = $mudastatusUsuario->mudastatus($_POST['id'], $_POST['Statuss']);
         
-        redireciona('../paginasvisualizacao/usuarioscadastrados.php');
-    }  preciso arrumar esta logica aqui.... nao ta reconhecendo o id...session */
-    $mudastatusUsuario = new Usuarios($mysql);
-    $remove = $mudastatusUsuario->mudastatus($_POST['id'], $_POST['Statuss']);
+        header("Location: ../paginasvisualizacao/usuarioscadastrados.php");
+
+    }  
 
 }
+
+/*preciso arrumar esta logica aqui.... nao ta reconhecendo o id...session 
+    /*$mudastatusUsuario = new Usuarios($mysql);
+    $remove = $mudastatusUsuario->mudastatus($_POST['id'], $_POST['Statuss']); */
 
     
 
 $usuario = new Usuarios($mysql);
 $user = $usuario->encontrarPorId($_GET['id']);
+
+/*$nome = new Usuarios($mysql);
+$nomeusuario = $nome->encontrarPorId($_GET['Nome']); */
 
 
 ?>
@@ -50,6 +66,9 @@ $user = $usuario->encontrarPorId($_GET['id']);
         <div id="divexclusao">
 
         
+        <p1>Bem vindo <?php echo $_SESSION['Nome'] ?></p1>
+
+        
 
         <p id="textoedicao"> Para "excluir" digite 2 no Status e clique no botão </p>
 
@@ -58,6 +77,8 @@ $user = $usuario->encontrarPorId($_GET['id']);
             <form action="removerusuario.php?id=<?php echo $user['id']?>" method="post" class ="formadicionar" data-form>
 
                 <input type="hidden" class="nomepreco"   name="id" value="<?php echo $user['id']; ?>">
+
+                <input type="hidden" class="nomepreco"   name="nome" value="<?php echo $user['Nome']; ?>">
 
                 <input type="text" class="nomepreco"   name="Statuss" value="<?php echo $user['Statuss']; ?>">
                           
