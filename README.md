@@ -5,8 +5,10 @@ Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum c
 
 
 <p align="center"><strong>Link de acesso a esta pagina:</strong></p>
-https://analisesdetransacoes.crismgsp.com/
+https://analisesdetransacoes.crismgsp.com/ <br>
 
+acabei de testar e nesta pagina acima a parte de usuarios esta funcionando so pra incluir, pra editar e excluir não está funcionando, irei mexer e
+tentar descobrir o motivo pois no meu computador está funcionando normalmente estas funcoes  <br>
 
 <p align="center"><strong>O que tem neste projeto até este momento:</strong></p>
 

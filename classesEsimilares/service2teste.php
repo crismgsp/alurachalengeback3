@@ -1,7 +1,6 @@
 <?php
 
     
-
     class Imprime 
     {
 
@@ -15,7 +14,7 @@
         public function imprimir (): array 
             {
             
-                $resultado = $this->mysql->query('SELECT DISTINCT DataHoraImportacao FROM transacoes'); 
+                $resultado = $this->mysql->query('SELECT DISTINCT DataHoraImportacao, DISTINCT SUBSTRING(DataeHora, 1, 10) AS Initial FROM transacoes'); 
                 
                 $imprimir = $resultado->fetch_all(MYSQLI_ASSOC);
                     
@@ -23,7 +22,7 @@
                 return $imprimir;
             }
 
-            public function imprimirdata () : array
+            /*public function imprimirdata () : array
             {
                 
                 $resultadodata = $this->mysql->query('SELECT  DISTINCT SUBSTRING(DataeHora, 1, 10) AS Initial FROM transacoes');
@@ -31,6 +30,6 @@
                 
                 
                 return $imprimirdata; 
-            } 
+            } */
             
     }        
