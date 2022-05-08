@@ -4,6 +4,10 @@ Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum c
  A minha intenção em participar do Chalenge é aprender mais (e colocar o php que já  aprendi até o momento em prática), é ter um contato com a área de backend e ver as dificuldades. Tenho muita curiosidade de fazer um deploy em uma aplicacao de forma que funcione direitinho igual funciona quando testo no computador.
 
 
+<p align="center"><strong>Link de acesso a esta pagina:</strong></p>
+https://analisesdetransacoes.crismgsp.com/
+
+
 <p align="center"><strong>O que tem neste projeto até este momento:</strong></p>
 
 <strong>Tela inicial:</strong> onde o usuario acessa a pagina de  login para acessar outras telas<br>
@@ -13,9 +17,13 @@ Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum c
 <strong>Tela de importacões:</strong>Ao fazer o login o usuario e direcionado para uma tela onde pode importar transacoes, por enquanto somente no formato csv, tem as seguintes validações antes de importar o arquivo no moemnto: faz uma checagem se o arquivo
 está no formato csv e se ainda não existe a data da primeira linha do arquivo do upload no banco de dados . Ao importar estas tabelas elas vao para o banco de dados, onde também sao inseridos (além dos dados do arquivo importado) o horario e a data  de importação e o usuario logado em colunas especificas.<br>
 Nesta mesma tela a pessoa pode acessar outras 2 telas, uma chama importacoesfeitas e outra chamada cadastrar usuarios.<br>
+
 <strong>Tela de importacões feitas:</strong> Nesta tela da para ver as datas das transacoes e a data de importacao das importacoes que ja foram feitas, e na frente de cada tem um link, que quando o usuario clica, puxa os dados do banco de dados e mostra todas as colunas daquela transacao especifica, elas ficam na tela de transacoes detalhadas<br>
-<strong>Tela de transações suspeitas:</strong> Nesta tela aparecem as transacoes suspeitas, na tela de cima a pessoa escolhe um mes (preciso melhorar o jeito da pessoa selecionar o mes) caso seja feita uma transação com valor maior do que 100.000 aparece na tela do mes da transacao, caso uma conta bancaria tenha feito no mes todo transacoes (tanto de entrada como de saida) no valor total maior que 1000000 aparece na tabela abaixo, e caso a soma total de transacoes de uma agencia seja maior que 1 bilhao no mes aparece na terceira tabela desta pagina.
+
+<strong>Tela de transações suspeitas:</strong> Nesta tela aparecem as transacoes suspeitas, na tela de cima a pessoa escolhe um mes (preciso melhorar o jeito da pessoa selecionar o mes) caso seja feita uma transação com valor maior do que 100.000 aparece na tela do mes da transacao, caso uma conta bancaria tenha feito no mes todo transacoes (tanto de entrada como de saida) no valor total maior que 1000000 aparece na tabela abaixo, e caso a soma total de transacoes de uma agencia seja maior que 1 bilhao no mes aparece na terceira tabela desta pagina.<br>
+
 <strong>Cadastrar usuarios</strong> Nesta tela, tem um formulario, em que é possivel para o usuario logado, cadastrar outro usuario, digitando, nome, email, status e senha. Esta senha fica criptografada no banco de dados. Nesta página tambem tem um botão onde é possível acessar os usuários já cadastrados: tela usuarios cadastrados.<br>
+
 <strong>Usuarios cadastrados</strong> Nesta tela aparecem todos os usuarios cadastrados, e há na frente de cada nome os botoes editar e excluir que levam para outras telas, no caso do editar é possivel editar nome, email e senha do usuario, e no caso do botao excluir é possivel mudar o status, se mudar de 1 para 2 o login fica inacessivel  para o usuario, pois foi pedido para nao excluir totalmente para nao gerar problemas caso o usuario tenha postado tabelas, o nome dele ser puxado do banco de dados normalmente, mesmo apos o acesso ficar inacessivel. O usuário não pode se excluir e nenhum usuário pode excluir o admin.
 <br>
 
