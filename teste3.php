@@ -25,25 +25,36 @@
 
         $dadosconta2 = $resultado2->fetch_all(MYSQLI_ASSOC); 
 
-        /*$dadostotais = array_merge($dadosconta, $dadosconta2);
+        /*$dadostotais = array_merge($dadosconta, $dadosconta2); */ 
 
-        var_dump($dadostotais);
-        exit(); */
+        $obterdadosindividuais = function($dadostotais) {
+            return $dadostotais['Banco']['Agencia']['Conta']['Soma'];
+        };
 
-        $dadostotaiscomrepeticao = array_merge($dadosconta, $dadosconta2); 
-        $dadostotaiscomrepeticao2 = array_merge($dadosconta, $dadosconta2); 
+       /*var_dump($dadostotais);
+        exit();
 
-        $dadostotais = $dadostotaiscomrepeticao + $dadostotaiscomrepeticao2; 
+        este teste acima retornou um array com 8 arrays 
 
-        /*$dadostotais = $dadosconta + $dadosconta2;  fiz isso e parece que so retorna as que tem nome de banco em comum nas 2 consultas */
-
-        
-        
         $contasuspeita = array();
+        array_push($contasuspeita, $dadostotais[0]); */
 
+       $contasuspeita1 = $dadosconta;
 
+        foreach($dadosconta2 as $dados1) {
+            $posicao = $contasuspeita1['Banco']['Agencia']['Conta'];
+            if (in_array($posicao, $contasuspeita1)) {    /*se nao existe adiciona */
+                array_push($contasuspeita1, $dados1);
+            }else {  /* se nao existe aumenta apenas a quantidade */
+                $contasuspeita1[$posicao]['Soma'] += $dados1['Soma'];
+            }
+
+        } 
+
+      
+        $contasuspeita = array();
         
-        foreach($dadostotais as $dados) {
+        foreach($contasuspeita1 as $dados) {
             $soma = $dados['Soma'];
 
             if($soma > 1000000) {
@@ -51,7 +62,8 @@
             }
         }
         
-
+        var_dump($contasuspeita);
+        exit();  
         
 
 

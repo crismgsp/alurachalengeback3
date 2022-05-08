@@ -58,21 +58,51 @@ class Analise
 
         
 
-        $dadostotais = array_merge($dadosconta, $dadosconta2);  
+        /* $dadostotais = array_merge($dadosconta, $dadosconta2);  
 
      
-        $contasuspeita = array();
+        $contasuspeita = array(); */
 
+        $contasuspeita1 = $dadosconta;
 
         
-        foreach($dadostotais as $dados) {
+        $contasuspeita2 = $dadosconta2;
+
+        foreach($contasuspeita2 as $dados1) {
+            $posicao = $contasuspeita2['Banco']['Agencia']['Conta'];
+            if ($posicao === false) {    /*se nao existe adiciona */
+                array_push($contasuspeita1, $dados1);
+            }else {  /* se existe aumenta apenas a quantidade */
+                
+                $contasuspeita1[$posicao]['Soma'] += $dados1['Soma'];
+            }
+
+        } 
+        
+        
+        /*
+        foreach($contasuspeita2 as $dados1) {
+            $posicao = $contasuspeita2['Banco']['Agencia']['Conta'];
+            if (in_array($posicao, $contasuspeita1)) {    se nao existe adiciona 
+                $contasuspeita1[$posicao]['Soma'] += $dados1['Soma'];
+            }else {   se nao existe aumenta apenas a quantidade 
+                array_push($contasuspeita1, $dados1);
+            }
+
+        } */
+
+
+
+      
+        $contasuspeita = array();
+        
+        foreach($contasuspeita1 as $dados) {
             $soma = $dados['Soma'];
 
             if($soma > 1000000) {
                 array_push($contasuspeita, $dados);
             }
         }
-        
 
         return $contasuspeita;
     }
@@ -83,13 +113,13 @@ class Analise
         
         $mesescolhido = $_POST['selecao'];
 
-        $resultado = $this->mysql->query("SELECT BancoOrigem, AgenciaOrigem, Sum(Valor) as Soma FROM transacoes WHERE Mes = '$mesescolhido' 
-        GROUP BY ContaOrigem, BancoOrigem, AgenciaOrigem");     
+        $resultado = $this->mysql->query("SELECT BancoOrigem as Banco, AgenciaOrigem as Agencia, Sum(Valor) as Soma FROM transacoes WHERE Mes = '$mesescolhido' 
+        GROUP BY  BancoOrigem, AgenciaOrigem");     
              
         $dadosconta = $resultado->fetch_all(MYSQLI_ASSOC);
 
-        $resultado2 = $this->mysql->query("SELECT BancoDestino, AgenciaDestino, Sum(Valor) as Soma FROM transacoes WHERE Mes = '$mesescolhido' 
-        GROUP BY ContaDestino, BancoDestino, AgenciaDestino");
+        $resultado2 = $this->mysql->query("SELECT BancoDestino as Banco, AgenciaDestino as Agencia, Sum(Valor) as Soma FROM transacoes WHERE Mes = '$mesescolhido' 
+        GROUP BY BancoDestino, AgenciaDestino");
 
         $dadosconta2 = $resultado2->fetch_all(MYSQLI_ASSOC);
 
@@ -97,26 +127,29 @@ class Analise
         /* checar os valores de todas contas tentar agrupar por conta de alguma forma observando os dados de agencia, banco e numero conta e 
         fazer uma soma dos valores mensais*/
 
-        $agenciasuspeita = array();
+        $agenciasuspeita1 = $dadosconta;
 
-        foreach($dadosconta as $dados) {
-            $soma = $dados['Soma'];
 
-            array_push($agenciasuspeita, $dados);
-            
-        }    
+        $agenciasuspeita2 = $dadosconta2;
 
-        foreach($dadosconta2 as $dados2) {
-            $soma = $dados['Soma'];
-            array_push($agenciasuspeita, $dados2);
-           
-        }
+        foreach($agenciasuspeita2 as $dados1) {
+            $posicao = $agenciasuspeita2['Banco']['Agencia'];
+            if ($posicao === false) {    /*se nao existe adiciona */
+                array_push($agenciasuspeita1, $dados1);
+            }else {  /* se existe aumenta apenas a quantidade */
+                $agenciasuspeita1[$posicao]['Soma'] += $dados1['Soma'];    
+
+            }
+
+        } 
+
 
         $agenciasuspeitatotal = array();
 
-        foreach($agenciasuspeita as $suspeita ) {
+        foreach($agenciasuspeita1 as $suspeita ) {
+            $soma = $suspeita['Soma'];
             if($soma > 1000000000) {
-                array_push($agenciasuspeitatotal, $dados2);
+                array_push($agenciasuspeitatotal, $suspeita);
             }
         }
 

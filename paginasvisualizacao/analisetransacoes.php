@@ -122,9 +122,9 @@ $agenciasuspeitasmes = $agenciassusp->agenciaSuspeita();
         <tbody>
             <?php foreach ($agenciasuspeitasmes as $agencia) : ?>
                 <tr>
-                    <td><?php echo $agencia['BancoDestino']; ?></td>
-                    <td><?php echo $agencia['AgenciaDestino']; ?></td>
-                    <td><?php echo $agencia['Valor']; ?></td>
+                    <td><?php echo $agencia['Banco']; ?></td>
+                    <td><?php echo $agencia['Agencia']; ?></td>
+                    <td><?php echo $agencia['Soma']; ?></td>
                     
                     
 
