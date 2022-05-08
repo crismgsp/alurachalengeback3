@@ -26,13 +26,16 @@ $usuarios = $usuariomostra->exibirTodos();
         <link rel="stylesheet" href="../assets/css/usuarios.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/usuarios.css">
 
     </head>
 
     <body>
+       
+    <a href="../paginasadmin/cadastrarusuarios.php?Nome=<?php echo $_SESSION['Nome'] ?> "><button>Voltar para cadastrar usuários</button></a>
 
-    <p1><a href="../classesEsimilares/logout.php"><button class="logout">Logout</button></a></p1>
+    <p1><a href="../classesEsimilares/logout.php"><button id="logout">Logout</button></a></p1>
 
     <h1 id="titulo">USUÁRIOS CADASTRADOS</h1>
 

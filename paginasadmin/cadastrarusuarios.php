@@ -32,8 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 		<meta charset =”UTF-8
 		<meta name="viewport" content="width=device-width initial-scale=1.0"> 
 		
-		<<p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
-		
+		<link rel="stylesheet" href="../assets/css/usuarios.css">
+        	
 		
 		<link rel="stylesheet" href="../assets/css/cadastro.css">
         
@@ -63,33 +63,38 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 
                
 	
-			<a href="../paginasvisualizacao/usuarioscadastrados.php?Nome = <?php echo $usuario ?>"><button  id="administrador">Ver usuários cadastrados</button></a>
 			
 				
 		</header>	
 
-		<p><?php echo $_SESSION['Nome'];?></p>
+		<p>Olá <?php echo $_SESSION['Nome'];?></p>
         
 		
+		<a href="../paginasvisualizacao/usuarioscadastrados.php?Nome = <?php echo $usuario ?>"><button  id="administrador">Ver usuários cadastrados</button></a>
+		<a href="importacoes.php"><button>Voltar para página de importações</button></a>
+		<p1><a href="../classesEsimilares/logout.php?Nome = <?php echo $usuario ?>"><button class="logout">Logout</button></a></p1>
 
         
-        <form action="cadastrarusuarios.php" method="post" class ="formadicionar" data-form>
-           
-		
+        
 
+		<form action="cadastrarusuarios.php" method="post" class ="formadicionar" data-form>
 			
+			
+
+				
 			<input type="text" class="nomepreco"  required placeholder="Nome Completo" name="Nome" > 
 
-            <input type="text" class="nomepreco"  required placeholder="Email nome@email.com" name="Email" >
+			<input type="text" class="nomepreco"  required placeholder="Email nome@email.com" name="Email" >
 
-			 
+				
 
 			<input type="text" class="nomepreco"  required placeholder="Status 1" name="Statuss" >
 			<input type="text" class="nomepreco"  required placeholder="Digite a senha" name="Senha" >
-                        
-            <input type="submit" value="Adicionar usuario" class="botaoadiciona" name="adiciona">	
+							
+			<input type="submit" value="Adicionar usuario" class="botaoadiciona" name="adiciona">	
 
-        </form>	
+		</form>	
+		
 
     </body>
     

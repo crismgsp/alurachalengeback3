@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require '../config.php';
 require '../classesEsimilares/analisefinanceira.php';
 
@@ -35,10 +37,12 @@ $agenciasuspeitasmes = $agenciassusp->agenciaSuspeita();
     <body>
 
     <div>
-    <p1>Escolha o mês de analise (digite o número do mês (1 a 12) </p1>    
+    <p1>Escolha o mês de analise (digite o número do mês (1 a 12) e dê enter </p1>    
     <form name="selecao" action="analisetransacoes.php" method="POST">
         <input name="selecao"></input>    
     </form>
+
+    <a href="importacoesfeitas.php"><button>Voltar para página de importações feitas</button></a>
 
     </div>
 

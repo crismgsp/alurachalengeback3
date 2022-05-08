@@ -27,30 +27,23 @@ $_SESSION['time']     = time();
  
     <head>
         <p><?php echo $_SESSION['Nome'];?></p> <p><?php echo date('d m Y ', $_SESSION['time']);?></p>
-        <p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
+        
         <title>Visualizar importacoes</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <link rel="stylesheet" href="../assets/css/style.css">
-        <link rel="stylesheet" href="../assets/css/login.css">
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/login.css">
 
 
     </head>
 
     <body>
 
-        
-
-
-        <div id="informacoes">
-
-            <div id="cabecalho">
-                <h1> Importações realizadas</h1>
-
-                <?php
+    <?php
                 $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
                 $explodeurl = explode("=", $url);
 
@@ -61,9 +54,18 @@ $_SESSION['time']     = time();
             
 
                 ?>
+    <a href="../paginasadmin/importacoes.php?Nome = <?php echo $usuario ?>"><button type="button" id="botaologin">Voltar para página de importacoes</button></a> 
+    <p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
+
+        <div id="informacoes">
+
+            <div id="cabecalho">
+                <h1> Importações realizadas</h1>
 
                 
-                <a href="../paginasadmin/importacoes.php?Nome = <?php echo $usuario ?>"><button type="button"  id="botaologin">Voltar</button></a> 
+
+                
+                
                 
             </div>
 
