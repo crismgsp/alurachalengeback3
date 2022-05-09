@@ -66,7 +66,7 @@ $nomeusuario = $nome->encontrarPorId($_GET['Nome']); */
         <div id="divexclusao">
 
         
-        <p1>Bem vindo <?php echo $_SESSION['Nome'] ?></p1>
+        <p1>Olá <?php echo $_SESSION['Nome'] ?></p1>
 
         
 

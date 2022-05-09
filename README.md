@@ -7,8 +7,7 @@ Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum c
 <p align="center"><strong>Link de acesso a esta pagina:</strong></p>
 https://analisesdetransacoes.crismgsp.com/ <br>
 
-acabei de testar e nesta pagina acima a parte de usuarios esta funcionando so pra incluir, pra editar e excluir não está funcionando, irei mexer e
-tentar descobrir o motivo pois no meu computador está funcionando normalmente estas funcoes  <br>
+OBS: Na parte dos usuarios em meu computador está funcionando tudo (usando xampp, apache, mariadb)...criar, editar...excluir com lógica  mas nesta pagina acima a parte de usuarios esta funcionando parcialmente,  pra incluir está ok, pra  excluir (que deste jeito que foi pedido é uma forma de editar tambem e está ok), mas não sei por qual motivo pra editar não está funcionando no site (mesmo estando com versoes diferentes de servidor...a função pra editar e pra excluir neste exemplo é bem parecida, e só uma delas está funcionando normalmente no site... )<br>
 
 <p align="center"><strong>O que tem neste projeto até este momento:</strong></p>
 
