@@ -19,8 +19,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
 }
 
-
-
 $usuario = new Usuarios($mysql);
 $user = $usuario->encontrarPorId($_GET['id']);
 

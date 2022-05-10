@@ -18,7 +18,7 @@ class Usuarios
     public function exibirTodos(): array
     {
 
-        $resultado = $this->mysql->query("SELECT ID, Nome, Email FROM `usuarios` WHERE `Nome` != 'Admin'");   
+        $resultado = $this->mysql->query("SELECT ID, Nome, Email FROM `usuarios` WHERE `Nome` != 'Admin' AND `Statuss` = '1'");   
              
         $usuarios = $resultado->fetch_all(MYSQLI_ASSOC);
 
