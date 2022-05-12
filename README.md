@@ -14,8 +14,11 @@ OBS: Na parte dos usuarios em meu computador está funcionando tudo mas ao subir
 
 Se quiser ver um vídeo desta parte funcionando totalmente no meu computador clique abaixo:
 
-<p><img src='https://www.youtube.com/watch?v=u4Qs3cL47iQ' alt="Video com a parte de edição dos usuarios"/> Clique aqui pra ver o video </p>
-
+<iframe width="560" height="315"
+src="https://www.youtube.com/watch?v=u4Qs3cL47iQ" 
+frameborder="0" 
+allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+allowfullscreen></iframe>
 
 
 <p align="center"><strong>O que tem neste projeto até este momento (de forma mais detalhada que no resumo):</strong></p>
