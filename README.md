@@ -10,11 +10,13 @@ admin@email.com.br    senha: 123999   (abaixo relato um probleminha que ocorreu 
 <p align="center"><strong>Link de acesso a esta pagina:</strong></p>
 https://analisesdetransacoes.crismgsp.com/ <br>
 
-OBS: Na parte dos usuarios em meu computador está funcionando tudo (usando xampp, apache, mariadb)...criar, editar...excluir com lógica  mas nesta pagina acima a parte de usuarios esta funcionando parcialmente,  pra incluir está ok, pra  excluir (que deste jeito que foi pedido é uma forma de editar tambem e está ok), mas não sei por qual motivo pra editar não está funcionando no site (mesmo estando com versoes diferentes de servidor...a função pra editar e pra excluir neste exemplo é bem parecida, e só uma delas está funcionando normalmente no site... )<br>
+OBS: Na parte dos usuarios em meu computador está funcionando tudo mas ao subir para a hospedagem acima a parte de editar não está  funcionando.
 
-se quiser ver a parte de usuário funcionando no meu computador clique neste vídeo:
+Se quiser ver um vídeo desta parte funcionando totalmente no meu computador clique abaixo:
 
-<p><iframe src='/assets/imagens/Partedosusuariosmeucomputador.WEBM' alt="video da parte dos usuarios"/> Video </iframe></p>
+<p><img src='https://www.youtube.com/watch?v=u4Qs3cL47iQ' alt="Video com a parte de edição dos usuarios"/> Clique aqui pra ver o video </p>
+
+
 
 <p align="center"><strong>O que tem neste projeto até este momento (de forma mais detalhada que no resumo):</strong></p>
 
