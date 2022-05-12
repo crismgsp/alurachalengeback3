@@ -10,9 +10,12 @@ require '../classesEsimilares/redireciona.php';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if(empty($_POST)) {
         echo "Voce precisa preencher todos dados para editar";
-    }else{
+    }elseif($_POST['Nome'] === 'Admin') {
+        echo "O usuario Admin nao pode ser editado";
+    } 
+    else{
         $edita = new Usuarios($mysql);
-        $editar = $edita->editar($_POST['id'], $_POST['Nome'], $_POST['Email'], $_POST['Senha']);
+        $editar = $edita->editar($_POST['id'], $_POST['Nome'], $_POST['Email']);
     
         header("Location: ../paginasvisualizacao/usuarioscadastrados.php");
     }
@@ -42,7 +45,7 @@ $user = $usuario->encontrarPorId($_GET['id']);
 
     <body>
 
-        <p1>Olá<?php echo $_SESSION['Nome'] ?></p1>
+        <p1>Olá <?php echo $_SESSION['Nome'] ?></p1>
 
         <div id="diveditar">
 
@@ -64,7 +67,7 @@ $user = $usuario->encontrarPorId($_GET['id']);
                 <input type="text" class="nomepreco"  required placeholder="Email nome@email.com" name="Email"
                 value= "<?php echo $user['Email']; ?>" >
 
-                <input type="text" class="nomepreco"  required placeholder="Digite a senha" name="Senha" >
+                
                             
                 <input type="submit" value="Editar usuario" class="botaoaedita" name="edita">	
 

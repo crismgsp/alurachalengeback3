@@ -9,8 +9,6 @@ include('../classesEsimilares/service.php');
 require '../config.php';
 
 
-
-
 $imprime = new Imprime($mysql);
 $imprimir = $imprime->imprimir();
 
@@ -62,14 +60,8 @@ $_SESSION['time']     = time();
 
             <div id="cabecalho">
                 <h1> Importações realizadas</h1>
-
-                
-
-                
-                
-                
+    
             </div>
-
             
                 <div id="tabelas"> 
 

@@ -1,7 +1,7 @@
 <?php
 
 
-session_start(); /*tambem coloquei isto dia 27 de abril */
+session_start(); 
 
 require '../config.php';
 
@@ -44,5 +44,5 @@ if (password_verify($_POST['Senha'], $row[0]) && $Statuss == 1)  {
     exit();
 }else {
     echo "Usuario ou senha não existem";
-    header('Location: ..public_html/index.html');
+    header('Location: ../index.html');
 }
