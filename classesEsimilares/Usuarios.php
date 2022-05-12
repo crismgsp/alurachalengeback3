@@ -35,10 +35,10 @@ class Usuarios
         return $usuario;
     }
 
-    public function editar(string $id, string $Nome, string $Email, string $Senha): void 
+    public function editar(string $id, string $Nome, string $Email): void 
     {
-        $editaUsuario = $this->mysql->prepare('UPDATE usuarios SET Nome = ?, Email = ?, Senha = ? WHERE id = ?');
-        $editaUsuario->bind_param('ssss', $Nome, $Email, $Senha, $id);
+        $editaUsuario = $this->mysql->prepare('UPDATE usuarios SET Nome = ?, Email = ? WHERE id = ?');
+        $editaUsuario->bind_param('sss', $Nome, $Email, $id);
         $editaUsuario->execute();
     }
 
