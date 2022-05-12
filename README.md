@@ -12,13 +12,9 @@ https://analisesdetransacoes.crismgsp.com/ <br>
 
 OBS: Na parte dos usuarios em meu computador está funcionando tudo mas ao subir para a hospedagem acima a parte de editar não está  funcionando.
 
-Se quiser ver um vídeo desta parte funcionando totalmente no meu computador clique abaixo:
+Se quiser ver um vídeo desta parte funcionando totalmente no meu computador clique no link abaixo:
 
-<iframe width="560" height="315"
-src="https://www.youtube.com/watch?v=u4Qs3cL47iQ" 
-frameborder="0" 
-allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-allowfullscreen></iframe>
+"https://www.youtube.com/watch?v=u4Qs3cL47iQ" 
 
 
 <p align="center"><strong>O que tem neste projeto até este momento (de forma mais detalhada que no resumo):</strong></p>
