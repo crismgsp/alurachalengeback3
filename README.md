@@ -1,15 +1,27 @@
 <h1 align="center"><strong>Chalenge Backend 3 da Alura.</strong></h1>
 
-Comecei o chalenge com uma noção muito pequena de PHP e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples).
- A minha intenção em participar do Chalenge é aprender mais (e colocar o php que já  aprendi até o momento em prática), é ter um contato com a área de backend e ver as dificuldades. Tenho muita curiosidade de fazer um deploy em uma aplicacao de forma que funcione direitinho igual funciona quando testo no computador.
+(Resumo) O objetivo deste chalenge foi criar um sistema com as seguintes opções: parte dos usuários: login e logout de usuarios, um lugar no sistema pra cadastrar, editar e excluir os usuários de forma lógica (sem excluir de verdade, apenas deixar inativo, não pode fazer login). Parte das transações financeiras: No sistema tem que ter um local para fazer upload de arquivos no formato csv (e xml tambem), este arquivo ao passar pelas validações irá ser cadastrado no banco de dados criado para o projeto. Também há uma tela onde é possível ver as importações feitas e um botão em cada linha que direciona para uma tela que detalha cada importação. Há um lugar especifico onde é possível ver as transacoes suspeitas ocorridas no mês escolhido.Se quiser acessar a minha aplicação o link está abaixo: utilize o seguintes usuário e senha: <br>
 
+<p>admin@email.com.br    senha: 123999 </p> <br>
 
 <p align="center"><strong>Link de acesso a esta pagina:</strong></p>
 https://analisesdetransacoes.crismgsp.com/ <br>
 
-OBS: Na parte dos usuarios em meu computador está funcionando tudo (usando xampp, apache, mariadb)...criar, editar...excluir com lógica  mas nesta pagina acima a parte de usuarios esta funcionando parcialmente,  pra incluir está ok, pra  excluir (que deste jeito que foi pedido é uma forma de editar tambem e está ok), mas não sei por qual motivo pra editar não está funcionando no site (mesmo estando com versoes diferentes de servidor...a função pra editar e pra excluir neste exemplo é bem parecida, e só uma delas está funcionando normalmente no site... )<br>
 
-<p align="center"><strong>O que tem neste projeto até este momento:</strong></p>
+OBS: Na parte dos usuarios em meu computador está funcionando tudo mas ao subir para a hospedagem acima a parte de editar não está  funcionando.
+
+Se quiser ver um vídeo desta parte funcionando totalmente no meu computador clique no link abaixo:
+
+"https://www.youtube.com/watch?v=u4Qs3cL47iQ"  <br>
+
+
+Relato pessoal sobre o projeto: Comecei o chalenge com uma noção de PHP e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples). A minha intenção em participar do Chalenge foi aprender mais (e colocar o php que já  aprendi até o momento em prática), e ter um contato com a área de backend e ver as dificuldades. Foi um grande desafio e terminei com algumas pendencias (relatadas abaixo), e pretendo criar um novo repositório com esta aplicaçao melhorada, após avançar no php e aprender a usar um framework e arrumar alguns detalhes da visualização. 
+
+
+
+<p align="center"><strong>O que tem neste projeto até este momento (de forma mais detalhada que no resumo):</strong></p>
+
+<strong>Banco de dados:</strong> Um banco de dados com 2 tabelas, uma pra armazenar as informações dos usuários e outra pra armazenar as informações das importações<br>
 
 <strong>Tela inicial:</strong> onde o usuario acessa a pagina de  login para acessar outras telas<br>
 
