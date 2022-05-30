@@ -37,9 +37,34 @@ $agenciasuspeitasmes = $agenciassusp->agenciaSuspeita();
     <body>
 
     <div>
-    <p1>Escolha o mês de analise (digite o número do mês (1 a 12) e dê enter </p1>    
+
+    <!-- <p1>Escolha o mês de analise (digite o número do mês (1 a 12) e dê enter </p1>    
     <form name="selecao" action="analisetransacoes.php" method="POST">
         <input name="selecao"></input>    
+    </form>  -->
+
+    <form name="selecao" action="analisetransacoes.php" method="POST">
+
+        <label>Escolha um mês pra analise</label>
+   
+        <select name="selecao">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+            <option>9</option>
+            <option>10</option>
+            <option>11</option>
+            <option>12</option>
+
+        </select>
+
+        <input type="submit" value="Clique para ver as analises deste mês" />
+
     </form>
 
     <a href="importacoesfeitas.php"><button>Voltar para página de importações feitas</button></a>
