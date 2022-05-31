@@ -17,40 +17,54 @@ include('../classesEsimilares/verificalogin.php');
       
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="../assets/css/style.css">
         <link rel="stylesheet" href="../assets/css/diversos.css">
 
     </head>
 
-    <body>
-
-        <div id="cabecalho">
-            <div id="titulodiv">
-
-                <h2>Seja Bem vindo <?php echo $_SESSION['Nome'];?></h2>
-               
-                <h1 id="titulosuperior">Importar transações</h1> 
-                <a href="../index.html"><button class="logout">Logout</button></a>
+    <header>
+    
+        <div class="caixa">
                 
-            </div>
-            
-        </div>
-
-        <div class="container">
-
             <?php
-           /* $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
-            $explodeurl = explode("=", $url);
-
-                            
-            $usuariomodificado = $explodeurl[1];
-            
-            $usuario = str_replace("%27", " ", $usuariomodificado); */
+           
 
             $Nome = $_SESSION['Nome'];
             
 
             ?>
+                           
+            <nav>
+                <a href="../paginasvisualizacao/importacoesfeitas.php?Nome=<?php
+                echo $Nome ?>"> <button id="botaoacesso">Importacoes feitas</button></a>
 
+               <a href="cadastrarusuarios.php?Nome=<?php
+                echo $Nome ?>.php"> <button id="botaoacesso">Usuarios</button></a>
+
+                <a href="../paginasvisualizacao/analisetransacoes.php?Nome=<?php
+                echo $Nome ?>.php"> <button id="botaoacesso">Transações suspeitas</button></a>
+
+                <a href="../index.html"><button class="logout">Logout</button></a>
+
+            </nav>        
+
+            <p>Seja Bem vindo <?php echo $_SESSION['Nome'];?></p>
+               
+        </div>	
+		
+	</header>	
+
+    <body>
+        <div id="titulodiv">
+
+        <h3 id="titulosuperior">Importar transações</h3> 
+        
+        </div>
+
+
+        <div class="container">
+
+            
                             
             <form action="../classesEsimilares/importar4.php?Nome = <?php echo $Nome ?>" method="post" enctype="multipart/form-data">
                 <div class="jumbotron">
@@ -66,35 +80,8 @@ include('../classesEsimilares/verificalogin.php');
 
         <?php 
 
-    /*$url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
-
-
-    $explodeurl = explode("=", $url);
-
- 
-    $nomemodificado = $explodeurl[1];
-            
-    $nomemodificado2 = str_replace("%27", " ", $nomemodificado);
-
-    $nome = str_replace("%20", " ", $nomemodificado2);
-
-    */
-
+   
     ?>
-
-        <p>Para visualizar as importações já feita clique aqui <a href="../paginasvisualizacao/importacoesfeitas.php?Nome=<?php
-        echo $Nome ?>">
-                <button id="botaoacesso">Ver importações</button></a>  </p>
-
-        <p>Para cadastrar usuários ou ver os cadastrados clique aqui <a href="cadastrarusuarios.php?Nome=<?php
-        echo $Nome ?>.php">
-        <button id="botaoacesso">Ver usuarios ou cadastrar</button></a>  </p> 
-        
-        <p>Para ver as transações suspeitas clique aqui <a href="../paginasvisualizacao/analisetransacoes.php?Nome=<?php
-        echo $Nome ?>.php">
-        <button id="botaoacesso">Ver transações suspeitas</button></a>  </p> 
-
-        
 
     </body>
 

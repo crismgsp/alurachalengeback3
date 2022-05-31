@@ -12,11 +12,15 @@ body {
 }
 
 #titulodiv{
-    display: inline-block;
-    width: 300px;
+    display: inline;
+    
     padding: 1vw;
     padding-left: 15vw;
     
+}
+
+#titulosuperior {
+    font-size: 26px;
 }
 
 #botaodiv {
@@ -30,9 +34,15 @@ body {
 
 .jumbotron {
     background-color: rgba(161, 200, 218, 0.464);
-    padding: 2vw;
+    
     border-style: solid;
     border-color: black;
+    
+}
+
+.custom-file {
+    width: 50vw;
+    padding: 0;
 }
 
 .custom-file-input {

@@ -1,5 +1,10 @@
 /*pagina de exclusao */
 
+header{
+	background: #ffffff;
+	padding: 1vh 0;
+}
+
 #divexclusao {
     padding-left: 10vw;
     padding-top: 10vh;
@@ -50,7 +55,8 @@
 
 #titulosuperior {
     width: 30vw;
-    display: inline-block;
+    
+    align-items: center;
     
 }
 
@@ -60,4 +66,39 @@
     padding: 0;
     color: black;
 
+}
+
+#cabecalho {
+    display: inline-block;
+    width: 25%;
+}
+
+.logout {
+    display: inline-block;
+    width: 25%;
+}
+
+.caixa {
+	display: inline-block;
+	padding-top: 10vh;
+}
+
+nav{
+	position: absolute;
+	top: 110px;
+	right: 0;
+    padding-top: 10vh;
+}
+
+nav li {
+	display: inline-block;
+	margin: 0 0 0 15px;
+}
+
+nav a {
+	text-transform: uppercase;
+	color: #000000;
+	font-weight: bold;
+	font-size: 22px;
+	text-decoration: none;
 }
