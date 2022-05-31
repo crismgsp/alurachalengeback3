@@ -15,7 +15,7 @@ Se quiser ver um vídeo desta parte funcionando totalmente no meu computador cli
 "https://www.youtube.com/watch?v=u4Qs3cL47iQ"  <br>
 
 
-Relato pessoal sobre o projeto: Comecei o chalenge com uma noção de PHP e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples). A minha intenção em participar do Chalenge foi aprender mais (e colocar o php que já  aprendi até o momento em prática), e ter um contato com a área de backend e ver as dificuldades. Foi um grande desafio e terminei com algumas pendencias (relatadas abaixo), e pretendo criar um novo repositório com esta aplicaçao melhorada, após avançar no php e aprender a usar um framework e arrumar alguns detalhes da visualização. 
+Relato pessoal sobre o projeto: Comecei o chalenge com uma noção de PHP e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples). A minha intenção em participar do Chalenge foi aprender mais (e colocar o php que já  aprendi até o momento em prática), e ter um contato com a área de backend e ver as dificuldades. Foi um grande desafio e terminei com algumas pendencias (relatadas abaixo), e pretendo criar um novo repositório com esta aplicaçao melhorada, após avançar no php e aprender a usar um framework e arrumar alguns detalhes da visualização. O foco deste projeto (para mim) foi aplicar o que aprendi em php por isso quis fazer o máximo em php, preferi colocar mais esforço em deixa-lo funcionando o melhor possível com o que conheço no momento em vez de focar na parte visual, mas está fácil de achar as funcionalidades dentro dele.
 
 
 
@@ -33,7 +33,7 @@ Nesta mesma tela a pessoa pode acessar outras 2 telas, uma chama importacoesfeit
 
 <strong>Tela de importacões feitas:</strong> Nesta tela da para ver as datas das transacoes e a data de importacao das importacoes que ja foram feitas, e na frente de cada tem um link, que quando o usuario clica, puxa os dados do banco de dados e mostra todas as colunas daquela transacao especifica, elas ficam na tela de transacoes detalhadas<br>
 
-<strong>Tela de transações suspeitas:</strong> Nesta tela aparecem as transacoes suspeitas, na tela de cima a pessoa escolhe um mes (preciso melhorar o jeito da pessoa selecionar o mes) caso seja feita uma transação com valor maior do que 100.000 aparece na tela do mes da transacao, caso uma conta bancaria tenha feito no mes todo transacoes (tanto de entrada como de saida) no valor total maior que 1000000 aparece na tabela abaixo, e caso a soma total de transacoes de uma agencia seja maior que 1 bilhao no mes aparece na terceira tabela desta pagina.<br>
+<strong>Tela de transações suspeitas:</strong> Nesta tela aparecem as transacoes suspeitas, na tela de cima a pessoa escolhe um mes e clica no botão,  caso tenha sido feita uma transação com valor maior do que 100.000 aparece na tela do mes da transacao, caso uma conta bancaria tenha feito no mes todo transacoes (tanto de entrada como de saida) no valor total maior que 1000000 aparece na tabela abaixo, e caso a soma total de transacoes de uma agencia seja maior que 1 bilhao no mes aparece na terceira tabela desta pagina.<br>
 
 <strong>Cadastrar usuarios</strong> Nesta tela, tem um formulario, em que é possivel para o usuario logado, cadastrar outro usuario, digitando, nome, email, status e senha. Esta senha fica criptografada no banco de dados. Nesta página tambem tem um botão onde é possível acessar os usuários já cadastrados: tela usuarios cadastrados.<br>
 
@@ -43,11 +43,11 @@ Nesta mesma tela a pessoa pode acessar outras 2 telas, uma chama importacoesfeit
 <p align="center"><strong>Ainda preciso aprender para este projeto:</strong></p>
 
 <p><strong>Semana 1:</strong></p> 
-Validação de dados: falta fazer a parte de checar dentro do arquivo a ser importado se existe data diferente da primeira linha, se existir esta linha não é pra ser importada.
+Validação de dados: falta fazer a parte de checar dentro do arquivo a ser importado se existe data diferente da primeira linha, se existir esta linha não é pra ser importada. 
 <p><strong>Semana2:</strong></p> 
 Semana 2 Concluida <br>
 <p><strong>Semanas 3 e 4:</strong> </p> 
-Concluida, falta só melhorar a visualização, tem uma tabela na parte de importações feitas, que preciso melhorar.
+Concluida, falta só melhorar a visualização no geral, colocar um menu superior em todas, tem uma tabela na parte de importações feitas, que preciso melhorar, mas pra isso além de mexer na própria página onde ela aparece vou precisar alterar coisas nas classes e nos selects feitos....
  <br>
 
 
