@@ -72,7 +72,7 @@ CSS -> https://www.flaticon.com/free-icons/css-3
 <br>
 
 
-<p>Badges de participação neste backend3 </p>
+<p><strong>Badges de participação neste backend3 </strong></p>
 <p><img src='/assets/imagens/Badge_Alura_Challenge_back_First_v3.png' alt="Badgeparticipacao"/> Badge de participação no Chalenge </p>
 
 <p><img src='/assets/imagens/Badge_Alura_Challenge_Back_Helper.png' alt="Badgeparticipacao"/> Badge de colaboração</p>
