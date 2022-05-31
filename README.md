@@ -15,7 +15,7 @@ Se quiser ver um vídeo desta parte funcionando totalmente no meu computador cli
 "https://www.youtube.com/watch?v=u4Qs3cL47iQ"  <br>
 
 
-Relato pessoal sobre o projeto: Comecei o chalenge com uma noção de PHP e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples). A minha intenção em participar do Chalenge foi aprender mais (e colocar o php que já  aprendi até o momento em prática), e ter um contato com a área de backend e ver as dificuldades. Foi um grande desafio e terminei com algumas pendencias (relatadas abaixo), e pretendo criar um novo repositório com esta aplicaçao melhorada, após avançar no php e aprender a usar um framework e arrumar alguns detalhes da visualização. O foco deste projeto (para mim) foi aplicar o que aprendi em php por isso quis fazer o máximo em php, preferi colocar mais esforço em deixa-lo funcionando o melhor possível com o que conheço no momento em vez de focar na parte visual, mas está fácil de achar as funcionalidades dentro dele.
+<strong>Relato pessoal sobre o projeto:</strong> Comecei o chalenge com uma noção pequena de PHP (por exemplo ainda não tinha visto quase nada da parte de arrays que precisou muito pra este projeto) e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples). A minha intenção em participar do Chalenge foi aprender mais (e colocar o php que já  aprendi até o momento em prática), e ter um contato com a área de backend e ver as dificuldades. Foi um grande desafio e terminei com algumas pendencias (relatadas abaixo), e pretendo criar um novo repositório com esta aplicaçao melhorada, após avançar no php e aprender a usar um framework e arrumar alguns detalhes da visualização. O foco deste projeto (para mim) foi aplicar o que aprendi em php por isso quis fazer o máximo em php, preferi colocar mais esforço em deixa-lo funcionando o melhor possível com o que conheço no momento em vez de focar na parte visual, mas está fácil de achar as funcionalidades dentro dele. Aprendi muito mesmo ao participar deste chalenge, e aos poucos após terminar o desafio estou alternando os estudos com pequenas melhorias nele. 
 
 
 
@@ -73,9 +73,11 @@ CSS -> https://www.flaticon.com/free-icons/css-3
 
 
 <p><strong>Badges de participação neste backend3 </strong></p>
-<p><img src='/assets/imagens/Badge_Alura_Challenge_back_First_v3.png' alt="Badgeparticipacao"/> Badge de participação no Chalenge </p>
+<p><img src='/assets/imagens/Badge_Alura_Challenge_back_First_v3.png' alt="Badgeparticipacao"/> <br>
+ Badge de participação no Chalenge </p>
 
-<p><img src='/assets/imagens/Badge_Alura_Challenge_Back_Helper.png' alt="Badgeparticipacao"/> Badge de colaboração</p>
+<p><img src='/assets/imagens/Badge_Alura_Challenge_Back_Helper.png' alt="Badgeparticipacao"/> <br>
+Badge de colaboração</p>strong
 
 
 
