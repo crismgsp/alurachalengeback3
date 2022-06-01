@@ -9,11 +9,12 @@ include('../classesEsimilares/service.php');
 require '../config.php';
 
 
+
+
 $imprime = new Imprime($mysql);
 $imprimir = $imprime->imprimir();
 
-$imprimedata = new Imprime($mysql);
-$imprimirdata = $imprime->imprimirdata(); 
+
 
 $_SESSION['time']     = time();
 
@@ -24,7 +25,7 @@ $_SESSION['time']     = time();
 <html lang="pt">
  
     <head>
-        
+        <p><?php echo $_SESSION['Nome'];?></p> <p><?php echo date('d m Y ', $_SESSION['time']);?></p>
         
         <title>Visualizar importacoes</title>
         <meta charset="utf-8">
@@ -42,43 +43,6 @@ $_SESSION['time']     = time();
 
     <body>
 
-    <header>
-    
-        <div class="caixa">
-                
-            <?php
-           
-
-            $Nome = $_SESSION['Nome'];
-            
-
-            ?>
-                           
-            <nav>
-                <a href="../paginasadmin/importacoes.php?Nome=<?php
-                echo $Nome ?>"> <button id="botaoacesso">Importações</button></a>
-
-               <a href="../paginasadmin/cadastrarusuarios.php?Nome=<?php
-                echo $Nome ?>.php"> <button id="botaoacesso">Usuarios</button></a>
-
-                <a href="analisetransacoes.php?Nome=<?php
-                echo $Nome ?>.php"> <button id="botaoacesso">Transações suspeitas</button></a>
-
-                <a href="../index.html"><button class="logout">Logout</button></a>
-
-            </nav>        
-          
-            
-               
-        </div>	
-		
-	</header>	
-
-    <br>
-
-    <p>Seja Bem vindo <?php echo $_SESSION['Nome'];?></p> 
-    <p><?php echo "Hoje é " . date('d/ m /Y ', $_SESSION['time']);?></p>
-
     <?php
                 $url = str_replace("Novo/", "", $_SERVER["REQUEST_URI"]);
                 $explodeurl = explode("=", $url);
@@ -90,81 +54,70 @@ $_SESSION['time']     = time();
             
 
                 ?>
-    
+    <a href="../paginasadmin/importacoes.php?Nome = <?php echo $usuario ?>"><button>Voltar para página de importacoes</button></a> 
+    <p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
 
         <div id="informacoes">
 
             <div id="cabecalho">
                 <h1> Importações realizadas</h1>
-    
+
+              
             </div>
+
             
-                <div id="tabelas"> 
+                
 
-                    <div class="tabela1">
+                <div class="tabela1">
 
-                        <table  id="tabela1">    
-                            <thead id="titulo1">
-                                <tr id="transacoes">
-                                    <th scope="col">Data Transações</th>
-                                    
-                                </tr>
-                            </thead>
-
-                            <tbody>
+                    <table  id="tabela1">    
+                        <thead id="titulo1">
+                            <tr id="transacoes">
+                                <th scope="col">Data Transações</th>
+                                <th scope="col">Data Importações</th>
+                                <th scope="col">Visualizar detalhes</th>
                                 
-                                <?php foreach ($imprimirdata as $imprimedata) : ?> 
-                                <tr>
-                                            
-                                    <td id="coluna1">
-                                        
-                                        <?php 
-                                        $dataehora = $imprimedata['Initial'];
-                                        $datasemhora = substr($dataehora, 0, 10);
+                            </tr>
+                        </thead>
 
-                                        echo "$datasemhora"; 
-                                        ?>
-                                        
+                        <tbody>
+                                
+                            <?php foreach ($imprimir as $imprimedata) : ?> 
+                                <tr>
+                                                
+                                    <td>
+                                            
+                                    <?php 
+                                    $dataehora = $imprimedata['DataeHora'];
+                                    $datasemh = substr($dataehora, 0, 10);
+
+                                    echo "$datasemh"; 
+                                    ?>
+                                            
+                                    </td>
+
+                                    <td>                                          
+                                    <?php 
+                                    $dataehora = $imprimedata['DataHoraImportacao'];
+                                    $datasemhora = substr($dataehora, 0, 10);
+
+                                    echo "$datasemhora"; 
+                                    ?>
+                                            
+                                    </td>
+
+                                    <td>
+                                    <a href="importacoesdetalhadas.php?DataHoraImportacao=<?php echo $imprimedata['DataHoraImportacao'] ?>"><Button >Ver detalhes</Button></a>
                                     </td>
                                 </tr>    
-                                <?php endforeach; ?>
-                            <tbody>    
+                            <?php endforeach; ?>
+                        <tbody>    
 
 
-                        </table>
-                    </div>
+                    </table>
+                </div>
                 
-                    <div class="tabela2">
-                        <table  id="tabela2">    
-                            
-                            <thead id="titulo2">
-                                                
-                                <tr id="importacoes">
-                                    <th scope="col">Data Importações</th>
-                                </tr>
-                                
-                            </thead>
-                            <body>
-                            <?php foreach ($imprimir as $import) : ?>  
-                                <tr>   
-                                    <td id="coluna2">
-                                        
-                                        <?php echo $import['DataHoraImportacao']; ?>
-                                            
-                                    </td>
-                                    <td>
-                                        <a href="importacoesdetalhadas.php?DataHoraImportacao=<?php echo $import['DataHoraImportacao'] ?>"><Button >Ver detalhes</Button></a>
-                                    </td>
-                                    <?php endforeach; ?>         
-                                </tr>      
-
-                            </body>
-
-                        </table>    
-                    </div>
-
-
-                </div>  
+               
      
         </div>    
 

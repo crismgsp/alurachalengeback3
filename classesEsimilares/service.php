@@ -13,8 +13,22 @@
         }
         
 
-        
         public function imprimir (): array 
+        {
+            
+            $resultado = $this->mysql->query('SELECT DISTINCT DataHoraImportacao, DataeHora FROM transacoes GROUP BY DataHoraImportacao');
+                
+            $imprimir = $resultado->fetch_all(MYSQLI_ASSOC);
+
+                    
+            return $imprimir;
+        }
+
+       
+
+        
+
+        /*public function imprimir (): array 
         {
             
             $resultado = $this->mysql->query('SELECT DISTINCT DataHoraImportacao FROM transacoes'); 
@@ -23,7 +37,7 @@
                 
     
             return $imprimir;
-        }
+        } */
 
         public function imprimirdata () : array
         {

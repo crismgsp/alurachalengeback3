@@ -3,7 +3,7 @@
 session_start();
 include('../classesEsimilares/verificalogin.php');
 
-include('../classesEsimilares/service.php');
+include('../classesEsimilares/service2teste.php');
 
 
 require '../config.php';
@@ -14,8 +14,7 @@ require '../config.php';
 $imprime = new Imprime($mysql);
 $imprimir = $imprime->imprimir();
 
-$imprimedata = new Imprime($mysql);
-$imprimirdata = $imprime->imprimirdata(); 
+
 
 $_SESSION['time']     = time();
 
@@ -63,11 +62,7 @@ $_SESSION['time']     = time();
             <div id="cabecalho">
                 <h1> Importações realizadas</h1>
 
-                
-
-                
-                
-                
+              
             </div>
 
             
@@ -79,13 +74,13 @@ $_SESSION['time']     = time();
                             <thead id="titulo1">
                                 <tr id="transacoes">
                                     <th scope="col">Data Transações</th>
-                                    
+                                    <th scope="col">Data Importações</th>
                                 </tr>
                             </thead>
 
                             <tbody>
                                 
-                                <?php foreach ($imprimirdata as $imprimedata) : ?> 
+                                <?php foreach ($imprimir as $imprimedata) : ?> 
                                 <tr>
                                             
                                     <td id="coluna1">
@@ -98,6 +93,21 @@ $_SESSION['time']     = time();
                                         ?>
                                         
                                     </td>
+
+                                    <td id="coluna2">
+                                        
+                                        <?php 
+                                        $dataehora = $imprimedata['DataHoraImportacao'];
+                                        $datasemhora = substr($dataehora, 0, 10);
+
+                                        echo "$datasemhora"; 
+                                        ?>
+                                        
+                                    </td>
+
+                                    <td>
+                                        <a href="importacoesdetalhadas.php?DataHoraImportacao=<?php echo $import['DataHoraImportacao'] ?>"><Button >Ver detalhes</Button></a>
+                                    </td>
                                 </tr>    
                                 <?php endforeach; ?>
                             <tbody>    
@@ -106,35 +116,7 @@ $_SESSION['time']     = time();
                         </table>
                     </div>
                 
-                    <div class="tabela2">
-                        <table  id="tabela2">    
-                            
-                            <thead id="titulo2">
-                                                
-                                <tr id="importacoes">
-                                    <th scope="col">Data Importações</th>
-                                </tr>
-                                
-                            </thead>
-                            <body>
-                            <?php foreach ($imprimir as $import) : ?>  
-                                <tr>   
-                                    <td id="coluna2">
-                                        
-                                        <?php echo $import['DataHoraImportacao']; ?>
-                                            
-                                    </td>
-                                    <td>
-                                        <a href="importacoesdetalhadas.php?DataHoraImportacao=<?php echo $import['DataHoraImportacao'] ?>"><Button >Ver detalhes</Button></a>
-                                    </td>
-                                    <?php endforeach; ?>         
-                                </tr>      
-
-                            </body>
-
-                        </table>    
-                    </div>
-
+                    
 
                 </div>  
      
