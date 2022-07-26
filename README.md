@@ -8,7 +8,13 @@
 https://analisesdetransacoes.crismgsp.com/ <br>
 
 
-OBS: Na parte dos usuarios em meu computador está funcionando tudo mas ao subir para a hospedagem acima a parte de editar não está  funcionando.
+OBS: Na parte dos usuarios em meu computador está funcionando tudo mas ao subir para a hospedagem acima a parte de editar não está  funcionando.<br>
+OBS 2: estava refatorando o codigo pra ficar no padrao MVC e notei um problema aqui no arquivo analisefinanceira.php <br>
+
+public function agenciaSuspeita(): array   //checar melhor esta pedaço...na hora de criar a chave...parece que fiz errado...é que dos testes que fiz
+       // nenhum tinha detectado, irei fazer outros testes...e se ver que precisa mudar atualizo este pedaço aqui... na parte da chave nao deve ser assim
+        // $chave = $dados['Banco'].$dados['Agencia'].$dados['Conta']; tem que ser so $dados['Banco'].$dados['Agencia'] pois está checando agencia e nao conta <br>
+        <br>
 
 Se quiser ver um vídeo desta parte funcionando totalmente no meu computador clique no link abaixo:
 
