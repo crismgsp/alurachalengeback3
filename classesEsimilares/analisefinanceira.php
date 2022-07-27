@@ -128,7 +128,7 @@ class Analise
          $agenciasuspeita1 = array();
 
          foreach($dadostotais as $dados) {
-             $chave = $dados['Banco'].$dados['Agencia'].$dados['Conta'];
+             $chave = $dados['Banco'].$dados['Agencia'];
              if (!array_key_exists($chave, $agenciasuspeita1)) {
                  $agenciasuspeita1[$chave] = array( 
                      'Banco' => $dados['Banco'],
