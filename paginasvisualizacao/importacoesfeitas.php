@@ -25,7 +25,7 @@ $_SESSION['time']     = time();
 <html lang="pt">
  
     <head>
-        <p><?php echo $_SESSION['Nome'];?></p> <p><?php echo date('d m Y ', $_SESSION['time']);?></p>
+        
         
         <title>Visualizar importacoes</title>
         <meta charset="utf-8">
@@ -54,8 +54,33 @@ $_SESSION['time']     = time();
             
 
                 ?>
-    <a href="../paginasadmin/importacoes.php?Nome = <?php echo $usuario ?>"><button>Voltar para página de importacoes</button></a> 
-    <p1><a href="../classesEsimilares/logout.php"><button>Logout</button></a></p1>
+
+
+<header>
+    <?php 
+        
+    $Nome = $_SESSION['Nome'];
+             
+    ?>                               
+        <div class="menu">
+            <a href="../paginasadmin/importacoes.php?Nome = <?php echo $Nome ?>"> 
+            <button id="botaoacesso">Importacoes</button></a>
+
+            <a href="../paginasadmin/cadastrarusuarios.php?Nome=<?php
+            echo $Nome ?>.php"> <button id="botaoacesso">Usuarios</button></a>
+
+            <a href="analisetransacoes.php?Nome=<?php
+            echo $Nome ?>.php"> <button id="botaoacesso">Transações suspeitas</button></a>
+
+            <a href="../index.html"><button class="logout">Logout</button></a>
+
+        </div>  
+
+  	
+		
+	</header>	
+    
+    <p><?php echo 'Bem vindo ' . $_SESSION['Nome'];?></p> <p><?php echo 'Hoje é '. date('d/m/Y ', $_SESSION['time']);?></p>
 
         <div id="informacoes">
 

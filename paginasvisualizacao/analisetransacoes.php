@@ -34,6 +34,27 @@ $agenciasuspeitasmes = $agenciassusp->agenciaSuspeita();
 
     </head>
 
+    <header>
+    <?php 
+        
+    $Nome = $_SESSION['Nome'];
+             
+    ?>                               
+        <div class="menu">
+            <a href="../paginasadmin/importacoes.php?Nome = <?php echo $Nome ?>"> 
+            <button id="botaoacesso">Importacoes</button></a>
+
+            <a href="../paginasadmin/cadastrarusuarios.php?Nome=<?php
+            echo $Nome ?>.php"> <button id="botaoacesso">Usuarios</button></a>
+
+            <a href="../index.html"><button class="logout">Logout</button></a>
+
+        </div>  
+
+  	
+		
+	</header>	
+
     <body>
 
     <div>
@@ -63,11 +84,11 @@ $agenciasuspeitasmes = $agenciassusp->agenciaSuspeita();
 
         </select>
 
-        <input type="submit" value="Clique para ver as analises deste mês" />
+        <input type="submit" value="Após selecionar clique aqui" />
 
     </form>
 
-    <a href="importacoesfeitas.php"><button>Voltar para página de importações feitas</button></a>
+    
 
     </div>
 

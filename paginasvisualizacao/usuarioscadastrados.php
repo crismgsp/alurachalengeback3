@@ -33,9 +33,7 @@ $usuarios = $usuariomostra->exibirTodos();
 
     <body>
        
-    <a href="../paginasadmin/cadastrarusuarios.php?Nome=<?php echo $_SESSION['Nome'] ?> "><button>Voltar para cadastrar usuários</button></a>
-
-    <p1><a href="../classesEsimilares/logout.php"><button id="logout">Logout</button></a></p1>
+    
 
     <h1 id="titulo">USUÁRIOS CADASTRADOS</h1>
 

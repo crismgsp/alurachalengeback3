@@ -2,20 +2,11 @@
 
 (Resumo) O objetivo deste chalenge foi criar um sistema com as seguintes opções: parte dos usuários: login e logout de usuarios, um lugar no sistema pra cadastrar, editar e excluir os usuários de forma lógica (sem excluir de verdade, apenas deixar inativo, não pode fazer login). Parte das transações financeiras: No sistema tem que ter um local para fazer upload de arquivos no formato csv (e xml tambem), este arquivo ao passar pelas validações irá ser cadastrado no banco de dados criado para o projeto. Também há uma tela onde é possível ver as importações feitas e um botão em cada linha que direciona para uma tela que detalha cada importação. Há um lugar especifico onde é possível ver as transacoes suspeitas ocorridas no mês escolhido.Se quiser acessar a minha aplicação o link está abaixo: utilize o seguintes usuário e senha: <br>
 
-<p>admin@email.com.br    senha: 123999 </p> <br>
-
-<p align="center"><strong>Link de acesso a esta pagina:</strong></p>
-https://analisesdetransacoes.crismgsp.com/ <br>
+<p>Retirei o deploy do ar para economizar espaço, para testar agora, somente localmente, o projeto melhorado deste está disponível no outro respositório:
+https://github.com/crismgsp/alurachalengeback3MVC , nele dá para consultar com o deploy</p>
 
 
-OBS: Na parte dos usuarios em meu computador está funcionando tudo mas ao subir para a hospedagem acima a parte de editar não está  funcionando.
-
-Se quiser ver um vídeo desta parte funcionando totalmente no meu computador clique no link abaixo:
-
-"https://www.youtube.com/watch?v=u4Qs3cL47iQ"  <br>
-
-
-<strong>Relato pessoal sobre o projeto:</strong> Comecei o chalenge com uma noção pequena de PHP (por exemplo ainda não tinha visto quase nada da parte de arrays que precisou muito pra este projeto) e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples). A minha intenção em participar do Chalenge foi aprender mais (e colocar o php que já  aprendi até o momento em prática), e ter um contato com a área de backend e ver as dificuldades. Foi um grande desafio e terminei com algumas pendencias (relatadas abaixo), e pretendo criar um novo repositório com esta aplicaçao melhorada, após avançar no php e aprender a usar um framework e arrumar alguns detalhes da visualização. O foco deste projeto (para mim) foi aplicar o que aprendi em php por isso quis fazer o máximo em php, preferi colocar mais esforço em deixa-lo funcionando o melhor possível com o que conheço no momento em vez de focar na parte visual, mas está fácil de achar as funcionalidades dentro dele. Aprendi muito mesmo ao participar deste chalenge, e aos poucos após terminar o desafio estou alternando os estudos com pequenas melhorias nele. 
+<strong>Relato pessoal sobre o projeto:</strong> Comecei o chalenge com uma noção pequena de PHP (por exemplo ainda não tinha visto quase nada da parte de arrays que precisou muito pra este projeto) e já tinha tido algum contato com banco de dados(em outra área que eu trabalhava, mas com consultas simples). A minha intenção em participar do Chalenge foi aprender mais (e colocar o php que já  aprendi até o momento em prática), e ter um contato com a área de backend e ver as dificuldades. Foi um grande desafio e terminei com algumas pendencias (relatadas abaixo), e criei um novo repositório com esta aplicaçao melhorada, após avançar no php e aprender a usar um framework e arrumar alguns detalhes da visualização. O foco deste projeto (para mim) foi aplicar o que aprendi em php por isso quis fazer o máximo em php, preferi colocar mais esforço em deixa-lo funcionando o melhor possível com o que conheço no momento em vez de focar na parte visual, mas está fácil de achar as funcionalidades dentro dele. Aprendi muito mesmo ao participar deste chalenge, e aos poucos após terminar o desafio estou alternando os estudos com pequenas melhorias nele. 
 
 
 

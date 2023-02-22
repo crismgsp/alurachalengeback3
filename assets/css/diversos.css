@@ -83,17 +83,13 @@ header{
 	padding-top: 10vh;
 }
 
-nav{
-	position: absolute;
-	top: 110px;
-	right: 0;
-    padding-top: 10vh;
+
+.menu {
+    padding-bottom: 1vh;
 }
 
-nav li {
-	display: inline-block;
-	margin: 0 0 0 15px;
-}
+
+
 
 nav a {
 	text-transform: uppercase;

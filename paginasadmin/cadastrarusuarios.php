@@ -44,6 +44,27 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 		
 	</head>
 
+	<?php $Nome = $_SESSION['Nome']; ?>
+             
+			                                
+			<div class="menu">
+				<a href="importacoes.php?Nome=<?php
+				echo $Nome ?>"> <button id="botaoacesso">Importacoes</button></a>
+		 
+				<a href="../paginasvisualizacao/usuarioscadastrados.php?Nome=<?php
+				echo $Nome ?>.php"> <button id="botaoacesso">Ver usuários cadastrados</button></a>
+		 
+				<a href="../paginasvisualizacao/analisetransacoes.php?Nome=<?php
+				echo $Nome ?>.php"> <button id="botaoacesso">Transações suspeitas</button></a>
+		 
+				<a href="../index.html"><button class="logout">Logout</button></a>
+		 
+			</div>  
+		 
+			   
+				 
+			 </header>	
+
 	<body>
 
         <header>
@@ -70,11 +91,7 @@ if ($_SERVER['REQUEST_METHOD'] ==='POST') {
 		<p>Olá <?php echo $_SESSION['Nome'];?></p>
         
 		
-		<a href="../paginasvisualizacao/usuarioscadastrados.php?Nome = <?php echo $usuario ?>"><button  id="administrador">Ver usuários cadastrados</button></a>
-		<a href="importacoes.php"><button>Voltar para página de importações</button></a>
-		<p1><a href="../classesEsimilares/logout.php?Nome = <?php echo $usuario ?>"><button class="logout">Logout</button></a></p1>
-
-        
+		       
         
 
 		<form action="cadastrarusuarios.php" method="post" class ="formadicionar" data-form>

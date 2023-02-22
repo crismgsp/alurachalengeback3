@@ -23,34 +23,26 @@ include('../classesEsimilares/verificalogin.php');
     </head>
 
     <header>
-    
-        <div class="caixa">
-                
-            <?php
-           
+    <?php 
+        
+    $Nome = $_SESSION['Nome'];
+             
+    ?>                               
+        <div class="menu">
+            <a href="../paginasvisualizacao/importacoesfeitas.php?Nome=<?php
+            echo $Nome ?>"> <button id="botaoacesso">Importacoes feitas</button></a>
 
-            $Nome = $_SESSION['Nome'];
-            
+            <a href="cadastrarusuarios.php?Nome=<?php
+            echo $Nome ?>.php"> <button id="botaoacesso">Usuarios</button></a>
 
-            ?>
-                           
-            <nav>
-                <a href="../paginasvisualizacao/importacoesfeitas.php?Nome=<?php
-                echo $Nome ?>"> <button id="botaoacesso">Importacoes feitas</button></a>
+            <a href="../paginasvisualizacao/analisetransacoes.php?Nome=<?php
+            echo $Nome ?>.php"> <button id="botaoacesso">Transações suspeitas</button></a>
 
-               <a href="cadastrarusuarios.php?Nome=<?php
-                echo $Nome ?>.php"> <button id="botaoacesso">Usuarios</button></a>
+            <a href="../index.html"><button class="logout">Logout</button></a>
 
-                <a href="../paginasvisualizacao/analisetransacoes.php?Nome=<?php
-                echo $Nome ?>.php"> <button id="botaoacesso">Transações suspeitas</button></a>
+        </div>  
 
-                <a href="../index.html"><button class="logout">Logout</button></a>
-
-            </nav>        
-
-            <p>Seja Bem vindo <?php echo $_SESSION['Nome'];?></p>
-               
-        </div>	
+  	
 		
 	</header>	
 
