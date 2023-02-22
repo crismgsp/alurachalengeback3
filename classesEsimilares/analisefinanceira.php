@@ -100,7 +100,9 @@ class Analise
         return $contasuspeita;
     }
 
-    public function agenciaSuspeita(): array
+    public function agenciaSuspeita(): array   //checar melhor esta pedaço...na hora de criar a chave...acho que fiz errado...é que dos testes que fiz
+       // nenhum tinha detectado, irei refazer outros testes...e se ver que precisa mudar atualizo este pedaço aqui... na parte da chave nao deve ser assim
+        // $chave = $dados['Banco'].$dados['Agencia'].$dados['Conta']; tem que ser so $dados['Banco'].$dados['Agencia'] pois está checando agencia e nao conta
     { 
 
         
@@ -126,7 +128,7 @@ class Analise
          $agenciasuspeita1 = array();
 
          foreach($dadostotais as $dados) {
-             $chave = $dados['Banco'].$dados['Agencia'].$dados['Conta'];
+             $chave = $dados['Banco'].$dados['Agencia'];
              if (!array_key_exists($chave, $agenciasuspeita1)) {
                  $agenciasuspeita1[$chave] = array( 
                      'Banco' => $dados['Banco'],
